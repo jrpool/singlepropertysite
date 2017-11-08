@@ -1,0 +1,122 @@
+html, body {
+  height: 100%;
+}
+
+header {
+  background: url('resources/images/header.jpg') center top no-repeat;
+  background-size: cover;
+  height: 330px;
+}
+
+section {
+  margin: 55px 0;
+}
+
+iframe {
+  margin-bottom: 15px;
+}
+
+.header-list {
+  color: white;
+  text-shadow: 1px 1px 1px rgb(20, 20, 20);
+  background-color: rgba(80, 80, 80, 0.5);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.ucb {
+  background: url("resources/images/ucb.jpg") left no-repeat;
+}
+
+.museum {
+  background: url("resources/images/museum.jpg") right no-repeat;
+}
+
+.garden {
+  background: url("resources/images/garden.jpg") center no-repeat;
+}
+
+.laboratory {
+  background: url("resources/images/laboratory.jpg") center no-repeat;
+}
+
+.freight {
+  background: url("resources/images/freight.jpg") center no-repeat;
+}
+
+.academic {
+  background: url("resources/images/academic.jpg") center no-repeat;
+}
+
+.public {
+  background: url("resources/images/public.jpg") center no-repeat;
+}
+
+.tool {
+  background: url("resources/images/tool.jpg") center no-repeat;
+}
+
+.bart {
+  background: url("resources/images/bart.png") center no-repeat;
+}
+
+.eateries {
+  background: url("resources/images/eateries.jpg") center no-repeat;
+}
+
+.marketplace {
+  background: url("resources/images/marketplace.jpg") center left no-repeat;
+}
+
+.theatre {
+  background: url("resources/images/theatre.jpg") no-repeat;
+}
+
+.park {
+  background: url("resources/images/park.jpg") center no-repeat;
+}
+
+.nature {
+  background: url("resources/images/nature.jpg") center no-repeat;
+}
+
+.carousel-item {
+  background-size: cover;
+  height: 300px;
+}
+
+@media (max-width: 575px) { ... }
+
+@media (min-width: 576px) and (max-width: 767px) { ... }
+
+@media (min-width: 768px) and (max-width: 991px) { ... }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    background-position: center top -170px;
+    height: 400px;
+  }
+
+  .header-list {
+    padding: 15px 0;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    background-position: center top -170px;
+    height: 500px;
+  }
+
+  .header-list {
+    padding: 15px 0;
+    width: 85%;
+  }
+}
