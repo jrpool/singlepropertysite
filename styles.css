@@ -51,13 +51,13 @@ iframe {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .carousel-item {
-    height: 768px;
-  }
-
   header {
     background-position: center top -170px;
     height: 400px;
+  }
+
+  .carousel-item {
+    height: 768px;
   }
 
   .header-list {
@@ -67,8 +67,17 @@ iframe {
 }
 
 @media (min-width: 1200px) {
-  .carousel-item {
-    height: 860px;
+  h2 {
+    margin: 20px;
+  }
+
+  h4 {
+    margin: 50px 0 20px;
+  }
+
+  iframe {
+    margin-bottom: 30px;
+    height: 300px;
   }
 
   header {
@@ -79,5 +88,25 @@ iframe {
   .header-list {
     padding: 15px 0;
     width: 85%;
+  }
+
+  .carousel-item {
+    height: 460px;
+  }
+
+  .content-container {
+    box-shadow: 0 0 10px rgb(20, 20, 20);
+  }
+
+  .map {
+    height: 300px;
+  }
+
+/*  .treasures-list {
+    padding-top: 20px;
+  }*/
+
+  .treasures-list li {
+    margin-bottom: 4px;
   }
 }
