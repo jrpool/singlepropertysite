@@ -3,7 +3,7 @@ html, body {
 }
 
 header {
-  background: url('resources/images/header.jpg') center top no-repeat;
+  background: url("resources/images/header.jpg") center top no-repeat;
   background-size: cover;
   height: 330px;
 }
@@ -30,74 +30,31 @@ iframe {
   padding: 3px;
 }
 
-.ucb {
-  background: url("resources/images/ucb.jpg") left no-repeat;
-}
-
-.museum {
-  background: url("resources/images/museum.jpg") right no-repeat;
-}
-
-.garden {
-  background: url("resources/images/garden.jpg") center no-repeat;
-}
-
-.laboratory {
-  background: url("resources/images/laboratory.jpg") center no-repeat;
-}
-
-.freight {
-  background: url("resources/images/freight.jpg") center no-repeat;
-}
-
-.academic {
-  background: url("resources/images/academic.jpg") center no-repeat;
-}
-
-.public {
-  background: url("resources/images/public.jpg") center no-repeat;
-}
-
-.tool {
-  background: url("resources/images/tool.jpg") center no-repeat;
-}
-
-.bart {
-  background: url("resources/images/bart.png") center no-repeat;
-}
-
-.eateries {
-  background: url("resources/images/eateries.jpg") center no-repeat;
-}
-
-.marketplace {
-  background: url("resources/images/marketplace.jpg") center left no-repeat;
-}
-
-.theatre {
-  background: url("resources/images/theatre.jpg") no-repeat;
-}
-
-.park {
-  background: url("resources/images/park.jpg") center no-repeat;
-}
-
-.nature {
-  background: url("resources/images/nature.jpg") center no-repeat;
-}
-
 .carousel-item {
-  background-size: cover;
   height: 300px;
 }
 
-@media (max-width: 575px) { ... }
+@media (max-width: 575px) { 
 
-@media (min-width: 576px) and (max-width: 767px) { ... }
+}
 
-@media (min-width: 768px) and (max-width: 991px) { ... }
+@media (min-width: 576px) and (max-width: 767px) {
+  .carousel-item {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+  .carousel-item {
+    height: 576px;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-item {
+    height: 768px;
+  }
+
   header {
     background-position: center top -170px;
     height: 400px;
@@ -110,6 +67,10 @@ iframe {
 }
 
 @media (min-width: 1200px) {
+  .carousel-item {
+    height: 860px;
+  }
+
   header {
     background-position: center top -170px;
     height: 500px;
