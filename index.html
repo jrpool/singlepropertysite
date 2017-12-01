@@ -61,17 +61,29 @@
 
   <!-- location -->
   <section id="location">
-    <div class="container">
-      <h2>Location</h2>
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Location</h2>
+        </div>
+      </div>
 
       <!-- location map -->
-      <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12599.527498995498!2d-122.26438830177281!3d37.86305428086532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa43dab9b3fbea1bd!2sBerkeley+Town+House!5e0!3m2!1sen!2sus!4v1510170593805" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="row d-flex justify-content-center map">
+        <div class="col-12 col-md-8 col-md-offset-2">
+          <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12599.527498995498!2d-122.26438830177281!3d37.86305428086532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa43dab9b3fbea1bd!2sBerkeley+Town+House!5e0!3m2!1sen!2sus!4v1510170593805" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
 
       <!-- neighborhood treasures -->
-      <h4 id="treasures" class="text-center">Neighborhood Treasures</h4>
       <div class="row">
-        <div class="col-12 col-md-6">
-          <ul>
+        <div class="col-12">
+          <h4 id="treasures" class="text-center">Neighborhood Treasures</h4>
+        </div>
+
+        <!-- list of neighborhood treasures -->
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <ul class="treasures-list">
             <li data-target="#locationCarousel" data-slide-to="0"><a href="#ucb">UC Berkeley</a></li>
             <li data-target="#locationCarousel" data-slide-to="1"><a href="#museum">Berkeley Art Museum</a></li>
             <li data-target="#locationCarousel" data-slide-to="2"><a href="#garden">Botanical Garden</a></li>
@@ -79,10 +91,8 @@
             <li data-target="#locationCarousel" data-slide-to="4"><a href="#freight">Freight &amp; Salvage</a></li>
             <li data-target="#locationCarousel" data-slide-to="5"><a href="#academic">Academic Libraries</a></li>
             <li data-target="#locationCarousel" data-slide-to="6"><a href="#public">Public Libraries</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6">
-          <ul>
+<!--           </ul>
+          <ul> -->
             <li data-target="#locationCarousel" data-slide-to="7"><a href="#tool">Tool Lending Library</a></li>
             <li data-target="#locationCarousel" data-slide-to="8"><a href="#bart">2 Bart Stations</a></li>
             <li data-target="#locationCarousel" data-slide-to="9"><a href="#eateries">Eateries</a></li>
@@ -92,151 +102,303 @@
             <li data-target="#locationCarousel" data-slide-to="13"><a href="#nature">Nature</a></li>
           </ul>
         </div>
+
+        <!-- neighborhood treasures carousel -->
+        <div class="col-12 col-md-8">
+          <div id="locationCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#locationCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#locationCarousel" data-slide-to="1"></li>
+              <li data-target="#locationCarousel" data-slide-to="2"></li>
+              <li data-target="#locationCarousel" data-slide-to="3"></li>
+              <li data-target="#locationCarousel" data-slide-to="4"></li>
+              <li data-target="#locationCarousel" data-slide-to="5"></li>
+              <li data-target="#locationCarousel" data-slide-to="6"></li>
+              <li data-target="#locationCarousel" data-slide-to="7"></li>
+              <li data-target="#locationCarousel" data-slide-to="8"></li>
+              <li data-target="#locationCarousel" data-slide-to="9"></li>
+              <li data-target="#locationCarousel" data-slide-to="10"></li>
+              <li data-target="#locationCarousel" data-slide-to="11"></li>
+              <li data-target="#locationCarousel" data-slide-to="12"></li>
+              <li data-target="#locationCarousel" data-slide-to="13"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <!-- carousel item -->
+              <div class="carousel-item active ucb">
+                <img class="carousel-image d-block h-100" src="resources/images/ucb.jpg" alt="UC Berkley Campus">
+                <div class="carousel-caption">
+                  <h3>UC Berkeley</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item museum">
+                <img class="carousel-image d-block h-100" src="resources/images/museum.jpg" alt="Berkley Art Museum">
+                <div class="carousel-caption">
+                  <h3>Berkeley Art Museum</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item garden">
+                <img class="carousel-image d-block h-100" src="resources/images/garden.jpg" alt="Botanical Garden">
+                <div class="carousel-caption">
+                  <h3>Botanical Garden</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item laboratory">
+                <img class="carousel-image d-block h-100" src="resources/images/laboratory.jpg" alt="Lawrence Berkeley National Laboratory">
+                <div class="carousel-caption">
+                  <h3>Lawrence Berkeley National Laboratory</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item freight">
+                <img class="carousel-image d-block h-100" src="resources/images/freight.jpg" alt="Freight &amp; Salvage">
+                <div class="carousel-caption">
+                  <h3>Freight &amp; Salvage</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item academic">
+                <img class="carousel-image d-block h-100" src="resources/images/academic.jpg" alt="Academic Library">
+                <div class="carousel-caption">
+                  <h3>Academic Libraries</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item public">
+                <img class="carousel-image d-block h-100" src="resources/images/public.jpg" alt="Public Library">
+                <div class="carousel-caption">
+                  <h3>Public Libraries</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item tool">
+                <img class="carousel-image d-block h-100" src="resources/images/tool.jpg" alt="Tool Lending Library">
+                <div class="carousel-caption">
+                  <h3>Tool Lending Library</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item bart">
+                <img class="carousel-image d-block h-100" src="resources/images/bart.png" alt="Berkley Art Museum">
+                <div class="carousel-caption">
+                  <h3>2 Bart Stations</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item eateries">
+                <img class="carousel-image d-block w-100" src="resources/images/eateries.jpg" alt="Eateries">
+                <div class="carousel-caption">
+                  <h3>Eateries</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item marketplace">
+                <img class="carousel-image d-block h-100" src="resources/images/marketplace.jpg" alt="Berkley Bowl Marketplace">
+                <div class="carousel-caption">
+                  <h3>Berkeley Bowl Marketplace</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item theatre">
+                <img class="carousel-image d-block h-100" src="resources/images/theatre.jpg" alt="Cinema and Stage Theaters">
+                <div class="carousel-caption">
+                  <h3>Cinema and Stage Theaters</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item park">
+                <img class="carousel-image d-block h-100" src="resources/images/park.jpg" alt="People's Park">
+                <div class="carousel-caption">
+                  <h3>People's Park</h3>
+                </div>
+              </div>
+
+              <!-- carousel item -->
+              <div class="carousel-item nature">
+                <img class="carousel-image d-block h-100" src="resources/images/nature.jpg" alt="Nature">
+                <div class="carousel-caption">
+                  <h3>Nature</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- carousel controls -->
+            <a class="carousel-control-prev" href="#locationCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#locationCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- community -->
+  <section id="community">
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Community</h2>
+        </div>
       </div>
 
-      <!-- location carousel -->
-      <div id="locationCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#locationCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#locationCarousel" data-slide-to="1"></li>
-          <li data-target="#locationCarousel" data-slide-to="2"></li>
-          <li data-target="#locationCarousel" data-slide-to="3"></li>
-          <li data-target="#locationCarousel" data-slide-to="4"></li>
-          <li data-target="#locationCarousel" data-slide-to="5"></li>
-          <li data-target="#locationCarousel" data-slide-to="6"></li>
-          <li data-target="#locationCarousel" data-slide-to="7"></li>
-          <li data-target="#locationCarousel" data-slide-to="8"></li>
-          <li data-target="#locationCarousel" data-slide-to="9"></li>
-          <li data-target="#locationCarousel" data-slide-to="10"></li>
-          <li data-target="#locationCarousel" data-slide-to="11"></li>
-          <li data-target="#locationCarousel" data-slide-to="12"></li>
-          <li data-target="#locationCarousel" data-slide-to="13"></li>
-        </ol>
+      <div class="row">
+        <div class="col-12">
+          <ul>
+            <li>Founded in 1960, U.S.’s first-ever senior housing cooperative!</li>
+            <li>Limited to households with at least one resident 55+</li>
+            <li>Limited to permanent residents</li>
+            <li>Self-governing community of 60 units</li>
+            <li>Open process for revising community rules</li>
+            <li>Members do the landscaping and gardening</li>
+            <li>Members design building decorations and remodeling</li>
+            <li>Water- and energy-conservation group</li>
+            <li>Cooperative recycling</li>
+            <li>Exercise, crafts, art, literature, discussion, and game groups</li>
+            <li>Potlucks, parties, and excursions</li>
+            <li>Member-organized art exhibits and concerts</li>
+            <li>Member-organized talks, debates, and discussions</li>
+            <li>Member-screened movies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="carousel-inner">
-          <!-- carousel item -->
-          <div class="carousel-item active ucb">
-            <img class="carousel-image d-block h-100" src="resources/images/ucb.jpg" alt="UC Berkley Campus">
-            <div class="carousel-caption">
-              <h3>UC Berkeley</h3>
+  <section id="amenities">
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h4 id="treasures" class="text-center">Neighborhood Treasures</h4>
+        </div>
+        <div class="col-12">
+          <ul>
+            <li>Extensive planter garden</li>
+            <li>Table tennis and bocce ball</li>
+            <li>Audiovisual system for movies & presentations</li>
+            <li>Common kitchen and dining area</li>
+            <li>Lounge for relaxation, piano playing, and gatherings</li>
+            <li>Library</li>
+            <li>“Give-away bench”</li>
+            <li>Wi-fi throughout common space</li>
+            <li>Spacious U.S. mailboxes plus private message compartments</li>
+            <li>Laundry room with energy-efficient machines</li>
+            <li>Plentiful space to announce events and activities</li>
+            <li>2 elevators</li>
+            <li>Central fire alarm</li>
+            <li>Dedicated basement storage shelves</li>
+            <li>Indoor bicycle storage</li>
+            <li>Each corridor decorated by floor’s own residents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apartment">
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Apartment</h2>
+        </div>
+
+        <div class="col-12">
+          <ul>
+            <li>600 square feet</li>
+            <li>Remodeled 2009</li>
+            <li>Enlarged kitchen</li>
+            <li>Full-size dishwasher</li>
+            <li>Built-in 2-level microwave oven</li>
+            <li>Extra-deep unitary kitchen sink</li>
+            <li>Floor-to-ceiling kitchen, pantry, foyer, and bedroom storage</li>
+            <li>New bathroom cabinetry</li>
+            <li>Bathtub-size walk-in shower</li>
+            <li>Low-flow toilet</li>
+            <li>2 built-in medicine cabinets</li>
+            <li>Balcony enclosed with double-glazed low-E windows</li>
+            <li>Vertical blinds on all windows</li>
+            <li>Electrical wiring per current code</li>
+            <li>Wired for dual-line DSL (22 mbps) and cable</li>
+            <li>Built-in hand-made queen-size bed with massive storage drawers</li>
+            <li>Semi-industrial epoxy floor finish</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="container content-container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Terms</h2>
+        </div>
+
+        <div class="col-12">
+          <ul>
+            <li>Asking price $375,000</li>
+            <li>Financing available from co-op lenders</li>
+            <li>Condition: As-is, except repainted in purchaser’s color</li>
+            <li>Purchase requires screening, interview, and co-op approval of membership</li>
+            <li>Disclosures will be available before you make a purchase offer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container content-container">
+      <form>
+        <div class="row">
+          <div class="col-12">
+            <h2>Contact</h2>
+            <p>
+              Want a property tour and to meet some current members?
+            Questions?
+            </p>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name" class="sr-only">Name</label>
+              <input id="name" type="text" class="form-control" value="Name">
+            </div>
+            <div class="form-group">
+              <label for="email" class="sr-only">Email</label>
+              <input id="email" type="email" class="form-control" value="Email">
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber" class="sr-only">Phone Number</label>
+              <input id="phoneNumber" type="text" class="form-control" value="Phone Number">
             </div>
           </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item museum">
-            <img class="carousel-image d-block h-100" src="resources/images/museum.jpg" alt="Berkley Art Museum">
-            <div class="carousel-caption">
-              <h3>Berkeley Art Museum</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item garden">
-            <img class="carousel-image d-block h-100" src="resources/images/garden.jpg" alt="Botanical Garden">
-            <div class="carousel-caption">
-              <h3>Botanical Garden</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item laboratory">
-            <img class="carousel-image d-block h-100" src="resources/images/laboratory.jpg" alt="Lawrence Berkeley National Laboratory">
-            <div class="carousel-caption">
-              <h3>Lawrence Berkeley National Laboratory</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item freight">
-            <img class="carousel-image d-block h-100" src="resources/images/freight.jpg" alt="Freight &amp; Salvage">
-            <div class="carousel-caption">
-              <h3>Freight &amp; Salvage</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item academic">
-            <img class="carousel-image d-block h-100" src="resources/images/academic.jpg" alt="Academic Library">
-            <div class="carousel-caption">
-              <h3>Academic Libraries</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item public">
-            <img class="carousel-image d-block h-100" src="resources/images/public.jpg" alt="Public Library">
-            <div class="carousel-caption">
-              <h3>Public Libraries</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item tool">
-            <img class="carousel-image d-block h-100" src="resources/images/tool.jpg" alt="Tool Lending Library">
-            <div class="carousel-caption">
-              <h3>Tool Lending Library</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item bart">
-            <img class="carousel-image d-block h-100" src="resources/images/bart.png" alt="Berkley Art Museum">
-            <div class="carousel-caption">
-              <h3>2 Bart Stations</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item eateries">
-            <img class="carousel-image d-block h-100" src="resources/images/eateries.jpg" alt="Eateries">
-            <div class="carousel-caption">
-              <h3>Eateries</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item marketplace">
-            <img class="carousel-image d-block h-100" src="resources/images/marketplace.jpg" alt="Berkley Bowl Marketplace">
-            <div class="carousel-caption">
-              <h3>Berkeley Bowl Marketplace</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item theatre">
-            <img class="carousel-image d-block h-100" src="resources/images/theatre.jpg" alt="Cinema and Stage Theaters">
-            <div class="carousel-caption">
-              <h3>Cinema and Stage Theaters</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item park">
-            <img class="carousel-image d-block h-100" src="resources/images/park.jpg" alt="People's Park">
-            <div class="carousel-caption">
-              <h3>People's Park</h3>
-            </div>
-          </div>
-
-          <!-- carousel item -->
-          <div class="carousel-item nature">
-            <img class="carousel-image d-block h-100" src="resources/images/nature.jpg" alt="Nature">
-            <div class="carousel-caption">
-              <h3>Nature</h3>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="message" class="sr-only">Message</label>
+              <textarea id="message" class="form-control" rows="6"></textarea>
             </div>
           </div>
         </div>
-
-        <!-- carousel controls -->
-        <a class="carousel-control-prev" href="#locationCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#locationCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+      </form>
     </div>
   </section>
 

@@ -16,6 +16,14 @@ iframe {
   margin-bottom: 15px;
 }
 
+img {
+  width: 100%;
+}
+
+.content-container {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 .header-list {
   color: white;
   text-shadow: 1px 1px 1px rgb(20, 20, 20);
@@ -51,13 +59,13 @@ iframe {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .carousel-item {
-    height: 768px;
-  }
-
   header {
     background-position: center top -170px;
     height: 400px;
+  }
+
+  .carousel-item {
+    height: 768px;
   }
 
   .header-list {
@@ -67,8 +75,17 @@ iframe {
 }
 
 @media (min-width: 1200px) {
-  .carousel-item {
-    height: 860px;
+  h2 {
+    margin: 20px;
+  }
+
+  h4 {
+    margin: 50px 0 20px;
+  }
+
+  iframe {
+    margin-bottom: 30px;
+    height: 300px;
   }
 
   header {
@@ -79,5 +96,21 @@ iframe {
   .header-list {
     padding: 15px 0;
     width: 85%;
+  }
+
+  .carousel-item {
+    height: 460px;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+/*  .treasures-list {
+    padding-top: 20px;
+  }*/
+
+  .treasures-list li {
+    margin-bottom: 4px;
   }
 }
