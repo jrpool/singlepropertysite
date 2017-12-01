@@ -16,6 +16,14 @@ iframe {
   margin-bottom: 15px;
 }
 
+img {
+  width: 100%;
+}
+
+.content-container {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 .header-list {
   color: white;
   text-shadow: 1px 1px 1px rgb(20, 20, 20);
@@ -92,10 +100,6 @@ iframe {
 
   .carousel-item {
     height: 460px;
-  }
-
-  .content-container {
-    box-shadow: 0 0 10px rgb(20, 20, 20);
   }
 
   .map {
