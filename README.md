@@ -4,9 +4,9 @@ Single-page website advertising a real-estate property for sale.
 
 ## Project Members
 
-[José Chavez](https://github.com/jbchavez19)
-[Jorge Lopez](https://github.com/je-lopez)
-[Jonathan Pool](https://github.com/jrpool)
+- [José Chavez](https://github.com/jbchavez19)
+- [Jorge Lopez](https://github.com/je-lopez)
+- [Jonathan Pool](https://github.com/jrpool)
 
 ## Repository
 
