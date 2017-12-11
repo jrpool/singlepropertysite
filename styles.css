@@ -70,7 +70,7 @@ img {
     height: 768px;
   }
 
-  .header-list {
+  .header-list-main {
     padding: 15px 0;
     width: 75%;
   }
@@ -95,7 +95,7 @@ img {
     height: 500px;
   }
 
-  .header-list {
+  .header-list-main {
     padding: 15px 0;
     width: 85%;
   }
@@ -119,4 +119,11 @@ img {
   .treasures-list li {
     margin-bottom: 4px;
   }
+}
+
+.on-image {
+  text-shadow: 1px 1px 1px rgb(20, 20, 20);
+  background-color: #ffffffcc;
+  margin: 0;
+  padding: 0;
 }
