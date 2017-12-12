@@ -11,7 +11,7 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-header {
+.header-height-fixed {
   height: 330px;
 }
 
@@ -23,7 +23,7 @@ header {
   padding: 0;
 }
 
-header.main {
+header.bg-image {
   background: url("resources/images/header.jpg") center top no-repeat;
   background-size: cover;
 }
@@ -44,8 +44,14 @@ img {
   list-style-type: none;
 }
 
-@media (max-width: 575px) {
+.on-image {
+  text-shadow: 1px 1px 1px rgb(20, 20, 20);
+  background-color: #ffffffcc;
+  margin: 0;
+  padding: 0;
+}
 
+@media (max-width: 575px) {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -63,7 +69,6 @@ img {
 @media (min-width: 992px) and (max-width: 1199px) {
   header {
     background-position: center top -170px;
-    height: 400px;
   }
 
   .carousel-item {
@@ -92,7 +97,6 @@ img {
 
   header {
     background-position: center top -170px;
-    height: 500px;
   }
 
   .header-list-main {
@@ -119,11 +123,4 @@ img {
   .treasures-list li {
     margin-bottom: 4px;
   }
-}
-
-.on-image {
-  text-shadow: 1px 1px 1px rgb(20, 20, 20);
-  background-color: #ffffffcc;
-  margin: 0;
-  padding: 0;
 }
