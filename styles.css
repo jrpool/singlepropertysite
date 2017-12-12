@@ -23,7 +23,7 @@
   padding: 0;
 }
 
-header.bg-image {
+.bg-image {
   background: url("resources/images/header.jpg") center top no-repeat;
   background-size: cover;
 }
@@ -45,10 +45,24 @@ img {
 }
 
 .on-image {
-  text-shadow: 1px 1px 1px rgb(20, 20, 20);
+  border-radius: 1em;
   background-color: #ffffffcc;
   margin: 0;
   padding: 0;
+}
+
+.push-other-item-lower {
+  margin-bottom: 25vh;
+}
+
+.reminder {
+  display: inline-block;
+  border-radius: 3em;
+  padding: 1vw;
+  font-size: small;
+  font-style: italic;
+  color: gray;
+  background-color: #ffffff44;
 }
 
 @media (max-width: 575px) {
