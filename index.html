@@ -18,35 +18,52 @@
 
   <body>
 
-    <section id="question" class="d-flex h-100 align-items-center">
-      <section class="container-fluid">
-        <h1 class="text-center push-other-item-lower">
+    <section id="question" class="h-100 container">
+      <div class="h-50 row align-items-center h1">
+        <div class="col text-center">
           What can you do after 55?
-        </h1>
-        <h4><a class="btn btn-block btn-lg btn-info" href="#answer">
+        </div>
+      </div>
+      <div class="h-50 row align-items-start">
+        <div class="col"></div>
+        <a href="#answer">
+          <div class="col-*-auto text-center btn btn-lg btn-info btn-pulsing">
             OK, tell me …
-        </a></h4>
-      </section>
+          </div>
+        </a>
+        <div class="col"></div>
+      </div>
     </section>
 
-    <section id="answer" class="h-100 bg-image">
-      <p class="reminder">What can you do after 55?</p>
-      <section id="answer" class="d-flex h-100 align-items-center">
-        <section class="container-fluid">
-          <section class="on-image push-other-item-lower">
-            <h1 class="text-center">
-              The sky’s the limit!
-            </h1>
-            <p class="text-center">(If you live at <strong>Berkeley Town House</strong>!)</p>
-          </section>
-          <h4><a class="btn btn-block btn-lg btn-info" href="#details">
-              Really?
-          </a></h4>
-        </section>
-      </section>
+    <section id="answer" class="h-100 mw-100 container bg-image d-none">
+      <div class="h-25 row align-items-start">
+        <a href="#question">
+          <div class="col-*-auto on-image reminder">
+            What can you do after 55?
+          </div>
+        </a>
+        <div class="col"></div>
+      </div>
+      <div class="h-25 row align-items-start">
+        <div class="col"></div>
+        <div class="col-*-auto text-center on-image">
+          <p class="h1">The sky’s the limit!</p>
+          <p>(If you live at <strong>Berkeley Town House</strong>!)</p>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="h-50 row align-items-start">
+        <div class="col"></div>
+        <a href="#details">
+          <div class="col-*-auto text-center btn btn-lg btn-info btn-pulsing">
+            What’s the secret?
+          </div>
+        </a>
+        <div class="col"></div>
+      </div>
     </section>
 
-    <section id="details">
+    <section id="details" class="d-none">
       <header class="align-items-center">
         <div class="container-fluid justify-content-center">
           <h4>Yes, at Berkeley Town House you can:</h4>
@@ -56,7 +73,7 @@
         <section class="detail-head">
           <p>Belong to a historic housing cooperative</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <ul>
             <li>Founded in 1960.</li>
             <li>U.S.’s first-ever senior housing cooperative!</li>
@@ -71,7 +88,7 @@
         <section class="detail-head">
           <p>Enjoy friendships with fascinating co-op members.</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <p>Here are a few things that people at BTH have done recently:</p>
           <ul>
             <li>Act as CEO of a GIS and CAD company</li>
@@ -110,7 +127,7 @@
         <section class="detail-head">
           <p>Participate in co-op activities.</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <p>People who live at BTH, both in committees and individually, organize their own activities, including:</p>
           <ul>
             <li>Art exhibits</li>
@@ -143,7 +160,7 @@
         <section class="detail-head">
           <p>Help run the co-op itself.</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <p>How it works</p>
           <ul>
             <li>Co-op members elect directors.</li>
@@ -165,7 +182,7 @@
         <section class="detail-head">
           <p>Use expansive common space and amenities.</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <p>Spaces:</p>
           <ul>
             <li>Library</li>
@@ -204,7 +221,7 @@
         <section class="detail-head">
           <p>Occupy a complete private apartment</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <section>
             <p>Apartment 2C</p>
             <p>Features:</p>
@@ -252,7 +269,7 @@
         <section class="detail-head">
           <p>Walk to UC Berkeley and many more attractions</p>
         </section>
-        <section class="details">
+        <section class="details d-none">
           <section class="map">
             <div class="row justify-content-center map col-12 col-md-8 col-md-offset-2">
               <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12599.527498995498!2d-122.26438830177281!3d37.86305428086532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa43dab9b3fbea1bd!2sBerkeley+Town+House!5e0!3m2!1sen!2sus!4v1510170593805" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -407,7 +424,7 @@
       </section>
     </section>
 
-    <section id="join">
+    <section id="join" class="d-none">
       <section class="join-head">
         <p>How can I join?</p>
       </section>
@@ -457,9 +474,15 @@
       </section>
     </section>
 
-    <section id="credits">
-      <p class="text-center">Website by <a href="http://phase5.io">Phase 5</a></p>
-    </section>
+    <div id="credits" class="fixed-bottom">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-*-auto text-center credit">
+          Website by <a href="http://phase5.io">Phase 5</a>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="resources/jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="resources/popper/popper.min.js"></script>

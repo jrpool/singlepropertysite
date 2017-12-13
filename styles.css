@@ -1,3 +1,18 @@
+.bg-image {
+  background: url("resources/images/header.jpg") center top no-repeat;
+  background-size: cover;
+}
+
+.btn-pulsing {
+  animation-name: button-pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: unset;}
+
 .carousel {
   border: 1px solid black;
   padding: 3px;
@@ -11,6 +26,16 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.credit {
+  border-radius: 3em;
+  padding: 1vw;
+  background-color: #ffffff99;
+}
+
+.flex-if-shown {
+  display: flex;
+}
+
 .header-height-fixed {
   height: 330px;
 }
@@ -21,11 +46,6 @@
   background-color: rgba(80, 80, 80, 0.7);
   margin: 0;
   padding: 0;
-}
-
-.bg-image {
-  background: url("resources/images/header.jpg") center top no-repeat;
-  background-size: cover;
 }
 
 html, body {
@@ -46,16 +66,16 @@ img {
 
 .on-image {
   border-radius: 1em;
-  background-color: #ffffffcc;
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
+  background-color: #ffffffcc;
 }
 
 .push-other-item-lower {
-  margin-bottom: 25vh;
+  margin-bottom: 20vh;
 }
 
-.reminder {
+/*.reminder {
   display: inline-block;
   border-radius: 3em;
   padding: 1vw;
@@ -63,9 +83,29 @@ img {
   font-style: italic;
   color: gray;
   background-color: #ffffff44;
+}*/
+
+.reminder {
+  border-radius: 3em;
+  padding: 1vw;
+  font-size: small;
+  font-style: italic;
+  color: gray;
+  background-color: #ffffff66;
 }
 
-@media (max-width: 575px) {
+@keyframes button-pulse {
+  from {
+    opacity: 1;
+    border-radius: 0.25rem;
+  }
+  to {
+    opacity: 0.5;
+    border-radius: 1rem;
+  }
+}
+
+/*@media (max-width: 575px) {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -126,9 +166,9 @@ img {
     height: 300px;
   }
 
-/*  .treasures-list {
+  .treasures-list {
     padding-top: 20px;
-  }*/
+  }
 
   section {
     margin: 55px 0;
@@ -137,4 +177,4 @@ img {
   .treasures-list li {
     margin-bottom: 4px;
   }
-}
+}*/
