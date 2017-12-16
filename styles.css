@@ -3,6 +3,10 @@
   background-size: cover;
 }
 
+.btn {
+  cursor: pointer;
+}
+
 .btn-pulsing {
   animation-name: button-pulse;
   animation-duration: 1.5s;
@@ -11,7 +15,17 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-fill-mode: none;
-  animation-play-state: unset;}
+  animation-play-state: unset;
+}
+
+.btn-reminder {
+  border-radius: 3em;
+  padding: 1vw;
+  font-size: small;
+  font-style: italic;
+  color: gray;
+  background-color: #cccccc66;
+}
 
 .carousel {
   border: 1px solid black;
@@ -34,6 +48,18 @@
 
 .flex-if-shown {
   display: flex;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h1-minimum {
+  font-size: 2rem;
+}
+
+.h1-proportional {
+  font-size: 5vw;
 }
 
 .header-height-fixed {
@@ -75,23 +101,17 @@ img {
   margin-bottom: 20vh;
 }
 
-/*.reminder {
-  display: inline-block;
-  border-radius: 3em;
-  padding: 1vw;
-  font-size: small;
-  font-style: italic;
-  color: gray;
-  background-color: #ffffff44;
-}*/
+section {
+  display: none;
+  transition-property: opacity;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
 
-.reminder {
-  border-radius: 3em;
-  padding: 1vw;
-  font-size: small;
-  font-style: italic;
-  color: gray;
-  background-color: #ffffff66;
+section.detail-head,
+section.detail-type {
+  display: block;
 }
 
 @keyframes button-pulse {
@@ -101,7 +121,7 @@ img {
   }
   to {
     opacity: 0.5;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
   }
 }
 
