@@ -1,3 +1,9 @@
+.back {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+
 .bg-image {
   background: url("resources/images/header.jpg") center top no-repeat;
   background-size: cover;
@@ -67,6 +73,10 @@
   align-items: center;
 }
 
+.down {
+  margin-top: 10vh;
+}
+
 .flex-if-shown {
   display: flex;
 }
@@ -80,10 +90,18 @@
 }
 
 .h1-minimum {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .h1-proportional {
+  font-size: 7.5vw;
+}
+
+.h2-minimum {
+  font-size: 1rem;
+}
+
+.h2-proportional {
   font-size: 5vw;
 }
 
@@ -147,7 +165,6 @@ img {
 }
 
 section {
-  display: none;
   transition-property: opacity;
   transition-duration: 2s;
   transition-timing-function: ease;

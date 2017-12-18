@@ -11,36 +11,22 @@
 //   });
 // });
 
-var h1Resize = function() {
-  var targetElements = document.querySelectorAll('section .prompt');
-  if (window.innerWidth > 500) {
-    targetElements.forEach(function(element) {
-      element.classList.remove('h1-minimum');
-      element.classList.add('h1-proportional');
-    });
-  }
-  else {
-    targetElements.forEach(function(element) {
-      element.classList.remove('h1-proportional');
-      element.classList.add('h1-minimum');
-    });
-  }
-};
-
-var h4Resize = function() {
-  var targetElements = document.querySelectorAll('.h4');
-  if (window.innerWidth > 550) {
-    targetElements.forEach(function(element) {
-      element.classList.remove('h4-minimum');
-      element.classList.add('h4-proportional');
-    });
-  }
-  else {
-    targetElements.forEach(function(element) {
-      element.classList.remove('h4-proportional');
-      element.classList.add('h4-minimum');
-    });
-  }
+var hResize = function() {
+  ['1', '2', '4'].forEach(function(tagNum) {
+    var targetElements = document.querySelectorAll('.h' + tagNum);
+    if (window.innerWidth > 500) {
+      targetElements.forEach(function(element) {
+        element.classList.remove('h' + tagNum + '-minimum');
+        element.classList.add('h' + tagNum + '-proportional');
+      });
+    }
+    else {
+      targetElements.forEach(function(element) {
+        element.classList.remove('h' + tagNum + '-proportional');
+        element.classList.add('h' + tagNum + '-minimum');
+      });
+    }
+  });
 };
 
 var creditResize = function() {
@@ -62,7 +48,7 @@ var replaceSection = function(trigger, replacerSelector, replaceeSelector) {
     replacer.style.display = 'block';
     window.setTimeout(function() {
       replacer.style.opacity = 1;
-    }, 20);
+    }, 50);
     replacee.style.opacity = 0;
     window.setTimeout(function() {
       replacee.style.display = 'none';
@@ -73,6 +59,14 @@ var replaceSection = function(trigger, replacerSelector, replaceeSelector) {
 window.onload = function() {
   var overtSectionIDs = ['#question'];
   var latentSectionIDs = ['#answer', '#details', '#join'];
+  var latentSectionClasses = ['.detail-list'];
+  latentSectionClasses.forEach(function(sectionClass) {
+    var sections = document.querySelectorAll(sectionClass);
+    sections.forEach(function(section) {
+      section.style.display = 'none';
+      section.style.opacity = 0;
+    });
+  });
   latentSectionIDs.forEach(function(sectionID) {
     document.querySelector(sectionID).style.display = 'none';
     document.querySelector(sectionID).style.opacity = 0;
@@ -81,10 +75,9 @@ window.onload = function() {
     document.querySelector(sectionID).style.display = 'block';
     document.querySelector(sectionID).style.opacity = 1;
   });
-  h1Resize();
-  h4Resize();
+  hResize();
   creditResize();
-  replaceSection('#question .btn', '#answer', '#question');
+  replaceSection('#question .btn-lg', '#answer', '#question');
   replaceSection('#answer .back', '#question', '#answer');
   replaceSection('#answer .btn-lg', '#details', '#answer');
   replaceSection('#details .back', '#answer', '#details');
@@ -93,7 +86,6 @@ window.onload = function() {
 };
 
 window.onresize = function() {
-  h1Resize();
-  h4Resize();
+  hResize();
   creditResize();
 };
