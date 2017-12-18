@@ -85,11 +85,11 @@ window.onload = function() {
   h4Resize();
   creditResize();
   replaceSection('#question .btn', '#answer', '#question');
-  replaceSection('#answer .btn-reminder', '#question', '#answer');
+  replaceSection('#answer .back', '#question', '#answer');
   replaceSection('#answer .btn-lg', '#details', '#answer');
-  replaceSection('#details .btn-reminder', '#answer', '#details');
+  replaceSection('#details .back', '#answer', '#details');
   replaceSection('#details .btn-lg', '#join', '#details');
-  replaceSection('#join .btn-reminder', '#details', '#join');
+  replaceSection('#join .back', '#details', '#join');
 };
 
 window.onresize = function() {

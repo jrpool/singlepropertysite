@@ -28,15 +28,6 @@
   animation-play-state: unset;
 }
 
-.btn-reminder {
-  border-radius: 3em;
-  padding: 1vw;
-  font-size: small;
-  font-style: italic;
-  color: gray;
-  background-color: #cccccc66;
-}
-
 .carousel {
   border: 1px solid black;
   padding: 3px;
@@ -82,6 +73,10 @@
 
 .h-10 {
   height: 10%;
+}
+
+.h-15 {
+  height: 15%;
 }
 
 .h1-minimum {
@@ -141,6 +136,14 @@ img {
 
 .push-other-item-lower {
   margin-bottom: 20vh;
+}
+
+.reminder {
+  margin-bottom: 0;
+  text-align: left;
+  font-size: small;
+  font-style: italic;
+  color: gray;
 }
 
 section {
