@@ -4,18 +4,26 @@
   left: 2px;
 }
 
-.bg-image {
-  background: url("resources/images/header.jpg") center top no-repeat;
+.bg-image-bldg {
+  background: url("resources/images/bldg.jpg") center top no-repeat;
   background-size: cover;
 }
 
 .btn {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   cursor: pointer;
 }
 
 .btn-flex {
   margin-bottom: 3px;
   align-self: center;
+}
+
+.btn-lg {
+  cursor: pointer;
 }
 
 .btn-outline-secondary {
@@ -32,6 +40,11 @@
   animation-direction: alternate;
   animation-fill-mode: none;
   animation-play-state: unset;
+}
+
+.btn-sm {
+  display: inline;
+  cursor: pointer;
 }
 
 .carousel {
@@ -73,12 +86,28 @@
   align-items: center;
 }
 
-.down {
+.down-15 {
+  margin-top: 15vh;
+}
+
+.down-10 {
   margin-top: 10vh;
+}
+
+.down-5 {
+  margin-top: 5vh;
 }
 
 .flex-if-shown {
   display: flex;
+}
+
+.frame {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  text-align: center;
 }
 
 .h-10 {
@@ -141,24 +170,36 @@ img {
   width: 100%;
 }
 
+.list {
+  margin-left: 10vw;
+  text-align: left;
+}
+
+.list-minimum {
+  font-size: 0.5rem;
+}
+
 .list-plain {
   list-style-type: none;
 }
 
-.on-image {
-  border-radius: 1em;
-  margin: 0;
-  padding: 0 1em;
-  background-color: #ffffffcc;
+.list-proportional {
+  font-size: 1.8vw;
 }
 
-.push-other-item-lower {
-  margin-bottom: 20vh;
+.on-image {
+  border-radius: 2px;
+  padding: 0.1em 0.3em;
+  background-color: #ffffffaa;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .reminder {
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
   font-size: small;
   font-style: italic;
   color: gray;
@@ -166,14 +207,17 @@ img {
 
 section {
   transition-property: opacity;
-  transition-duration: 2s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
   transition-delay: 0s;
 }
 
-section.detail-head,
-section.detail-type {
+section.detail-head {
   display: flex;
+}
+
+w-auto {
+  width: auto;
 }
 
 @keyframes button-pulse {
