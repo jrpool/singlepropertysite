@@ -170,6 +170,11 @@ img {
   width: 100%;
 }
 
+later {
+  display: none;
+  opacity: 0;
+}
+
 .list {
   margin-left: 10vw;
   text-align: left;
