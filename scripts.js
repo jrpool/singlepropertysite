@@ -190,12 +190,13 @@ window.onload = function() {
     ['btn-life-party', 'life-list', 'party.jpg'],
     ['btn-life-rock', 'life-list', 'rock.jpg'],
     ['btn-life-talk', 'life-list', 'talk.jpg'],
+    ['btn-walk-academic', 'walk-list', 'academic.jpg'],
     ['btn-walk-bam', 'walk-list', 'bam.jpg'],
     ['btn-walk-bart', 'walk-list', 'bart.png'],
     ['btn-walk-bot', 'walk-list', 'bot.jpg'],
     ['btn-walk-bowl', 'walk-list', 'bowl.jpg'],
     ['btn-walk-bpl', 'walk-list', 'bpl.jpg'],
-    ['btn-walk-academic', 'walk-list', 'academic.jpg'],
+    ['btn-walk-bus', 'walk-list', 'bus.jpg'],
     ['btn-walk-cafe', 'walk-list', 'cafe.jpg'],
     ['btn-walk-cheap', 'walk-list', 'cheap.jpg'],
     ['btn-walk-chez', 'walk-list', 'chez.jpg'],
@@ -203,6 +204,7 @@ window.onload = function() {
     ['btn-walk-freight', 'walk-list', 'freight.jpg'],
     ['btn-walk-health', 'walk-list', 'health.jpg'],
     ['btn-walk-lbnl', 'walk-list', 'lbnl.jpg'],
+    ['btn-walk-moes', 'walk-list', 'moes.jpg'],
     ['btn-walk-nature', 'walk-list', 'nature.jpg'],
     ['btn-walk-park', 'walk-list', 'park.jpg'],
     ['btn-walk-pfa', 'walk-list', 'pfa.jpg'],
@@ -215,7 +217,7 @@ window.onload = function() {
     document.querySelector('#' + specs[0]).onclick = function() {
       document.querySelector('#images').style.backgroundImage
         = 'url(resources/images/' + specs[2] + ')';
-      yieldSectionTemp('#' + specs[1], '#images', 0.1, 2000);
+      yieldSectionTemp('#' + specs[1], '#images', 0.1, 3000);
     };
   });
   document.querySelectorAll('#members-list > p.list > span.toggle-child')
