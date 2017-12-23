@@ -2,6 +2,7 @@
   position: fixed;
   top: 2px;
   left: 2px;
+  line-height: 1;
 }
 
 .bg-image-bldg {
@@ -23,6 +24,12 @@
 }
 
 .btn-lg {
+  cursor: pointer;
+}
+
+.btn-list {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.15rem;
   cursor: pointer;
 }
 
@@ -166,6 +173,13 @@ iframe {
   margin-bottom: 15px;
 }
 
+.images {
+  background-image: "";
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 img {
   width: 100%;
 }
@@ -194,9 +208,9 @@ later {
 }
 
 .on-image {
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 0.1em 0.3em;
-  background-color: #ffffffaa;
+  background-color: #ffffff66;
 }
 
 .pointer {
@@ -208,7 +222,14 @@ later {
   text-align: center;
   font-size: small;
   font-style: italic;
-  color: gray;
+  color: darkgray;
+}
+
+.reminder-on-image {
+  margin-bottom: 0;
+  text-align: center;
+  font-style: italic;
+  color: darkgray;
 }
 
 section {
