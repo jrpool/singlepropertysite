@@ -134,11 +134,19 @@
 }
 
 .h2-minimum {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .h2-proportional {
-  font-size: 5vw;
+  font-size: 5.5vw;
+}
+
+.h3-minimum {
+  font-size: 1rem;
+}
+
+.h3-proportional {
+  font-size: 3.5vw;
 }
 
 .h4-minimum {
@@ -147,6 +155,14 @@
 
 .h4-proportional {
   font-size: 2.5vw;
+}
+
+.h5-minimum {
+  font-size: 0.6rem;
+}
+
+.h5-proportional {
+  font-size: 2vw;
 }
 
 .h-65 {
@@ -177,14 +193,14 @@ iframe {
   background-image: "";
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 img {
   width: 100%;
 }
 
-later {
+.later {
   display: none;
   opacity: 0;
 }
@@ -195,16 +211,16 @@ later {
   text-align: left;
 }
 
-.list-minimum {
+.li-minimum {
   font-size: 0.5rem;
+}
+
+.li-proportional {
+  font-size: 1.8vw;
 }
 
 .list-plain {
   list-style-type: none;
-}
-
-.list-proportional {
-  font-size: 1.8vw;
 }
 
 .on-image {

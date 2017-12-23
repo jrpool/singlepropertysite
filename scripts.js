@@ -1,18 +1,22 @@
 'use strict';
 
 var fontResize = function() {
-  ['h1', 'h2', 'h4', 'list'].forEach(function(className) {
-    var targetElements = document.querySelectorAll('.' + className);
+  [
+    ['.h1', 'h1'], ['.h2', 'h2'], ['.h3', 'h3'], ['.h4', 'h4'], ['.h5', 'h5'],
+    ['li', 'li']
+  ]
+  .forEach(function(spec) {
+    var targetElements = document.querySelectorAll(spec[0]);
     if (window.innerWidth > 500) {
       targetElements.forEach(function(element) {
-        element.classList.remove(className + '-minimum');
-        element.classList.add(className + '-proportional');
+        element.classList.remove(spec[1] + '-minimum');
+        element.classList.add(spec[1] + '-proportional');
       });
     }
     else {
       targetElements.forEach(function(element) {
-        element.classList.remove(className + '-proportional');
-        element.classList.add(className + '-minimum');
+        element.classList.remove(spec[1] + '-proportional');
+        element.classList.add(spec[1] + '-minimum');
       });
     }
   });
@@ -212,6 +216,22 @@ window.onload = function() {
       document.querySelector('#images').style.backgroundImage
         = 'url(resources/images/' + specs[2] + ')';
       yieldSectionTemp('#' + specs[1], '#images', 0.1, 2000);
+    };
+  });
+  document.querySelectorAll('#members-list > p.list > span.toggle-child')
+  .forEach(function(button) {
+    button.onclick = function() {
+      var sublist = button.parentNode.nextElementSibling;
+      if (sublist.style.display === 'none') {
+        button.innerHTML = 'Hide examples …';
+        sublist.style.display = 'block';
+        sublist.style.opacity = 1;
+      }
+      else {
+        button.innerHTML = 'Show examples …';
+        sublist.style.display = 'none';
+        sublist.style.opacity = 0;
+      }
     };
   });
 };
