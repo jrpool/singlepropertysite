@@ -220,14 +220,6 @@ later {
 .reminder {
   margin-bottom: 0;
   text-align: center;
-  font-size: small;
-  font-style: italic;
-  color: darkgray;
-}
-
-.reminder-on-image {
-  margin-bottom: 0;
-  text-align: center;
   font-style: italic;
   color: darkgray;
 }
