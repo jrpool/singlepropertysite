@@ -21,12 +21,18 @@
     <section id="question" class="frame initial">
       <p class="down-15 h1">Life after 55:<br>What can it offer?</p>
       <p class="down-10">
-        <span class="btn-lg btn-info btn-pulsing">OK, tell me …</span>
+        <span class="btn-lg btn-info btn-pulsing" dest="answer">
+          OK, tell me …
+        </span>
       </p>
     </section>
 
     <section id="answer" class="frame later bg-image-bldg">
-      <p class="back btn-sm btn-info" title="Back to start">▲<br>Back</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to start"
+        dest="question"
+      >▲<br>Back</p>
       <p class="down-15 on-image">
         <span class="reminder h4">Life after 55: What can it offer?</span><br>
         <span class="h1">The sky’s the limit!</span><br>
@@ -36,58 +42,97 @@
         </span>
       </p>
       <p class="down-10">
-        <span class="btn-lg btn-info btn-pulsing">
+        <span class="btn-lg btn-info btn-pulsing" dest="details">
           What’s the secret?
         </span>
       </p>
     </section>
 
     <section id="details" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH photo">▲<br>Back</p>
-      <p class="down-5 reminder h4">What’s the secret of Berkeley Town House?</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH photo"
+        dest="answer"
+      >▲<br>Back</p>
+      <p class="down-5">
+        <span class="reminder h4">
+          What’s the secret of Berkeley Town House?
+        </span>
+      </p>
       <p class="h1">At BTH you can …</p>
       <div class="list">
         <p class="down-5">
-          <span id="members-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="members-more"
+            class="btn-sm btn-info h4"
+            dest="members-list"
+          >More …</span>
           <span class="d-inline h4">Make fascinating friends</span>
         </p>
         <p>
-          <span id="life-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="life-more"
+            class="btn-sm btn-info h4"
+            dest="life-list"
+          >More …</span>
           <span class="d-inline h4">Lead a bustling individual and social life</span>
         </p>
         <p>
-          <span id="coop-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="coop-more"
+            class="btn-sm btn-info h4"
+            dest="coop-list">More …</span>
           <span class="d-inline h4">Belong to a historic housing cooperative</span>
         </p>
         <p>
-          <span id="gov-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="gov-more"
+            class="btn-sm btn-info h4"
+            dest="gov-list"
+          >More …</span>
           <span class="d-inline h4">Help run the co-op</span>
         </p>
         <p>
-          <span id="common-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="common-more"
+            class="btn-sm btn-info h4"
+            dest="common-list"
+          >More …</span>
           <span class="d-inline h4">Share expansive facilities</span>
         </p>
         <p>
-          <span id="apt-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="apt-more"
+            class="btn-sm btn-info h4"
+            dest="apt-list"
+          >More …</span>
           <span class="d-inline h4">Occupy a complete private apartment</span>
         </p>
         <p>
-          <span id="walk-more" class="btn-sm btn-info h4">More …</span>
+          <span
+            id="walk-more"
+            class="btn-sm btn-info h4"
+            dest="walk-list"
+          >More …</span>
           <span class="d-inline h4">
             Walk to UC and other Berkeley treasures
           </span>
         </p>
       </div>
-      <p class="down-5">
-        <span class="btn-lg btn-info btn-pulsing">How can I buy in?</span>
-      </p>
+      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="join">
+        How can I buy in?
+      </span></p>
     </section>
 
     <section id="images" class="frame later images"></section>
 
     <section id="members-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-5 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Make fascinating friends.</p>
       <p class="h3">Look at what people at BTH have recently done in …</p>
       <p class="down-5 list h4">
@@ -157,12 +202,20 @@
         <li>Protest government policies</li>
         <li>Travel to Antarctica</li>
       </ul>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span></p>
+      <p class="down-5">
+        <span class="btn-lg btn-info btn-pulsing" dest="life-list">
+          Next BTH perk …
+        </span>
+      </p>
     </section>
 
     <section id="life-list" class="frame later text-on-image">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Lead a bustling<br>individual and social life.</p>
       <p class="h4">
         At BTH, you know all your neighbors. It’s a real community.
@@ -218,12 +271,18 @@
           <span id="btn-life-expert" class="btn-list btn-info">pic</span>
         </li>
       </ul>
-      <p><span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span></p>
+      <p><span class="btn-lg btn-info btn-pulsing" dest="coop-list">
+        Next BTH perk …
+      </span></p>
     </section>
 
     <section id="coop-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-10 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Belong to a historic<br>housing cooperative.</p>
       <ul class="down-5 list">
         <li>BTH was founded in 1960.</li>
@@ -233,13 +292,19 @@
         <li>For tax purposes, you are treated as the owner of your unit.</li>
       </ul>
       <p class="down-10">
-        <span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span>
+        <span class="btn-lg btn-info btn-pulsing" dest="gov-list">
+          Next BTH perk …
+        </span>
       </p>
     </section>
 
     <section id="gov-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-5 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Help run the co-op.</p>
       <p class="h4">How it works:</p>
       <ul class="list">
@@ -293,13 +358,19 @@
         </li>
       </ul>
       <p class="down-5">
-        <span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span>
+        <span class="btn-lg btn-info btn-pulsing" dest="common-list">
+          Next BTH perk …
+        </span>
       </p>
     </section>
 
     <section id="common-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-5 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Share expansive facilities.</p>
       <p class="h4">Spaces:</p>
       <ul class="list">
@@ -369,12 +440,18 @@
           <span id="btn-common-bike" class="btn-list btn-info">pic</span>
         </li>
       </ul>
-      <p><span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span></p>
+      <p><span class="btn-lg btn-info btn-pulsing" dest="apt-list">
+        Next BTH perk …
+      </span></p>
     </section>
 
     <section id="apt-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-5 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Occupy a complete<br>private apartment.</p>
       <p class="h4">Apartment 2C is now available. Features:</p>
       <ul class="list">
@@ -450,12 +527,18 @@
         <li>Asking price $365,000.</li>
         <li>Seller will consider agreeing to make pre-closing improvements.
       </ul>
-      <p><span class="btn-lg btn-info btn-pulsing">Next BTH perk …</span></p>
+      <p><span class="btn-lg btn-info btn-pulsing" dest="walk-list">
+        Next BTH perk …
+      </span></p>
     </section>
 
     <section id="walk-list" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
-      <p class="down-5 reminder h4">At BTH, you can …</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
+      <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Walk to UC and other Berkeley treasures.</p>
       <ul class="list">
         <li>UC Berkeley
@@ -525,7 +608,11 @@
           <span id="btn-walk-nature" class="btn-list btn-info">pic</span>
         </li>
       </ul>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing">Show me on a map</span></p>
+      <p class="down-5">
+        <span class="btn-lg btn-info btn-pulsing" dest="map">
+          Show me on a map
+        </span>
+      </p>
     </section>
 
     <section id="map" class="frame later">
@@ -536,14 +623,24 @@
           alt="Map of BTH neighborhood"
         >
       </p>
-      <p class="back btn-sm btn-info" title="Back to walking">▲<br>Back</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to walking"
+        dest="walk-list"
+      >▲<br>Back</p>
       <p class="fixed-bottom">
-        <span class="btn-lg btn-info btn-pulsing">How can I buy in?</span>
+        <span class="btn-lg btn-info btn-pulsing" dest="join">
+          How can I buy in?
+        </span>
       </p>
     </section>
 
     <section id="join" class="frame later">
-      <p class="back btn-sm btn-info" title="Back to BTH’s secret">▲<br>Back</p>
+      <p
+        class="back btn-sm btn-info"
+        title="Back to BTH’s secret"
+        dest="details"
+      >▲<br>Back</p>
       <p class="down-5 h1">Buying in to BTH:</p>
       <p class="h4">How it works:</p>
       <ul class="down-5 list">

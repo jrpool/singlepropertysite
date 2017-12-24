@@ -34,9 +34,7 @@ var creditResize = function() {
   }
 };
 
-var replaceSection = function(replaceeSelector, replacerSelector) {
-  var replacer = document.querySelector(replacerSelector);
-  var replacee = document.querySelector(replaceeSelector);
+var replaceSection = function(replacee, replacer) {
   replacer.style.display = 'block';
   window.setTimeout(function() {
     replacer.style.opacity = 1;
@@ -47,9 +45,9 @@ var replaceSection = function(replaceeSelector, replacerSelector) {
   }, 1500);
 };
 
-var replaceOnClick = function(trigger, replaceeSelector, replacerSelector) {
-  document.querySelector(trigger).onclick = function() {
-    replaceSection(replaceeSelector, replacerSelector);
+var replaceOnClick = function(trigger, replacee, replacer) {
+  trigger.onclick = function() {
+    replaceSection(replacee, replacer);
   };
 };
 
@@ -84,6 +82,16 @@ var yieldSectionTemp = function(
   }, waitTime);
 };
 
+var sectionOf = function(element) {
+  var parent = element.parentElement;
+  if (parent.tagName === 'SECTION') {
+    return parent;
+  }
+  else {
+    return sectionOf(parent);
+  }
+};
+
 window.onload = function() {
   document.querySelectorAll('.later').forEach(function(section) {
     section.style.display = 'none';
@@ -95,39 +103,12 @@ window.onload = function() {
   });
   fontResize();
   creditResize();
-  var replacements = [
-    ['#answer .back', '#answer', '#question'],
-    ['#answer .btn-lg', '#answer', '#details'],
-    ['#apt-list .back', '#apt-list', '#details'],
-    ['#apt-list .btn-lg', '#apt-list', '#walk-list'],
-    ['#apt-more', '#details', '#apt-list'],
-    ['#common-list .back', '#common-list', '#details'],
-    ['#common-list .btn-lg', '#common-list', '#apt-list'],
-    ['#common-more', '#details', '#common-list'],
-    ['#coop-list .back', '#coop-list', '#details'],
-    ['#coop-list .btn-lg', '#coop-list', '#gov-list'],
-    ['#coop-more', '#details', '#coop-list'],
-    ['#details .back', '#details', '#answer'],
-    ['#details .btn-lg', '#details', '#join'],
-    ['#gov-list .back', '#gov-list', '#details'],
-    ['#gov-list .btn-lg', '#gov-list', '#common-list'],
-    ['#gov-more', '#details', '#gov-list'],
-    ['#join .back', '#join', '#details'],
-    ['#life-list .back', '#life-list', '#details'],
-    ['#life-list .btn-lg', '#life-list', '#coop-list'],
-    ['#life-more', '#details', '#life-list'],
-    ['#map .back', '#map', '#walk-list'],
-    ['#map .btn-lg', '#map', '#join'],
-    ['#members-list .back', '#members-list', '#details'],
-    ['#members-list .btn-lg', '#members-list', '#life-list'],
-    ['#members-more', '#details', '#members-list'],
-    ['#question .btn-lg', '#question', '#answer'],
-    ['#walk-list .back', '#walk-list', '#details'],
-    ['#walk-list .btn-lg', '#walk-list', '#map'],
-    ['#walk-more', '#details', '#walk-list']
-  ];
-  replacements.forEach(function(agenda) {
-    replaceOnClick(agenda[0], agenda[1], agenda[2]);
+  document.querySelectorAll('[dest]').forEach(function(button) {
+    replaceOnClick(
+      button,
+      sectionOf(button),
+      document.querySelector('#' + button.getAttribute('dest'))
+    );
   });
   var imageUses = [
     ['btn-apt-bathcab', 'apt-list', 'bathcab.jpg'],
