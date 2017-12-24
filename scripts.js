@@ -48,36 +48,36 @@ var replaceOnClick = function(trigger, replacee, replacer) {
   };
 };
 
-var yieldSection = function(
-  yielderSelector, yieldeeSelector, yielderOpacity
-) {
-  var yielder = document.querySelector(yielderSelector);
-  var yieldee = document.querySelector(yieldeeSelector);
-  yieldee.style.display = 'block';
-  window.setTimeout(function() {
-    yieldee.style.opacity = 1;
-  }, 50);
-  yielder.style.opacity = yielderOpacity;
-};
-
-var unyieldSection = function(unyielderSelector, unyieldeeSelector) {
-  var unyielder = document.querySelector(unyielderSelector);
-  var unyieldee = document.querySelector(unyieldeeSelector);
-  unyieldee.style.opacity = 0;
-  window.setTimeout(function() {
-    unyieldee.style.display = 'none';
-  }, 1500);
-  unyielder.style.opacity = 1;
-};
-
-var yieldSectionTemp = function(
-  yielderSelector, yieldeeSelector, yielderOpacity, waitTime
-) {
-  yieldSection(yielderSelector, yieldeeSelector, yielderOpacity);
-  window.setTimeout(function() {
-    unyieldSection(yielderSelector, yieldeeSelector);
-  }, waitTime);
-};
+// var yieldSection = function(
+//   yielderSelector, yieldeeSelector, yielderOpacity
+// ) {
+//   var yielder = document.querySelector(yielderSelector);
+//   var yieldee = document.querySelector(yieldeeSelector);
+//   yieldee.style.display = 'block';
+//   window.setTimeout(function() {
+//     yieldee.style.opacity = 1;
+//   }, 50);
+//   yielder.style.opacity = yielderOpacity;
+// };
+//
+// var unyieldSection = function(unyielderSelector, unyieldeeSelector) {
+//   var unyielder = document.querySelector(unyielderSelector);
+//   var unyieldee = document.querySelector(unyieldeeSelector);
+//   unyieldee.style.opacity = 0;
+//   window.setTimeout(function() {
+//     unyieldee.style.display = 'none';
+//   }, 1500);
+//   unyielder.style.opacity = 1;
+// };
+//
+// var yieldSectionTemp = function(
+//   yielderSelector, yieldeeSelector, yielderOpacity, waitTime
+// ) {
+//   yieldSection(yielderSelector, yieldeeSelector, yielderOpacity);
+//   window.setTimeout(function() {
+//     unyieldSection(yielderSelector, yieldeeSelector);
+//   }, waitTime);
+// };
 
 var sectionOf = function(element) {
   var parent = element.parentElement;
@@ -109,9 +109,14 @@ window.onload = function() {
   });
   document.querySelectorAll('[pic]').forEach(function(button) {
     button.onclick = function() {
-      document.querySelector('#images').style.backgroundImage
+      var imageSection = document.querySelector('#images');
+      imageSection.style.backgroundImage
         = 'url(resources/images/' + button.getAttribute('pic') + ')';
-      yieldSectionTemp('#' + sectionOf(button).id, '#images', 0.1, 3000);
+      var buttonSection = sectionOf(button);
+      replaceOnClick(
+        imageSection.firstElementChild, imageSection, buttonSection
+      );
+      replaceSection(buttonSection, imageSection);
     };
   });
   document.querySelectorAll('#members-list > p.list > span.toggle-child')
