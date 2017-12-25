@@ -46,7 +46,7 @@
 .credit {
   position: fixed;
   bottom: 3px;
-  right: 3px;
+  right: 20px;
   z-index: 1040;
   text-align: center;
   border-style: solid;
