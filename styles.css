@@ -10,13 +10,18 @@
   background-size: cover;
 }
 
+.bth-color {
+  color: darkmagenta;
+}
+
 .btn-lg {
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .btn-list {
   padding: 0.1rem 0.3rem;
-  border-radius: 0.15rem;
+  border-radius: 0.3rem;
   cursor: pointer;
 }
 
@@ -33,6 +38,7 @@
 }
 
 .btn-sm {
+  border-radius: 0.3rem;
   display: inline;
   cursor: pointer;
 }
@@ -80,7 +86,7 @@
 }
 
 .h1-minimum {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .h1-proportional {
@@ -123,15 +129,9 @@ html, body {
   height: 100%;
 }
 
-.images {
-  background-image: "";
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 img {
   width: 100%;
+  max-width: 100%;
 }
 
 .later {
