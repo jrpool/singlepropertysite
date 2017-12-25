@@ -130,6 +130,7 @@ html, body {
 }
 
 img {
+  height: auto;
   width: 100%;
   max-width: 100%;
 }
@@ -149,6 +150,13 @@ ul {
   margin-left: 7vw;
   margin-right: 5vw;
   text-align: left;
+}
+
+.next {
+  position: fixed;
+  top: 2px;
+  right: 20px;
+  line-height: 1;
 }
 
 .on-image {
