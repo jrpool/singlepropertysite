@@ -153,10 +153,13 @@ ul {
 }
 
 .next {
+  line-height: 1.5;
+}
+
+.next-high {
   position: fixed;
   top: 2px;
   right: 20px;
-  line-height: 1;
 }
 
 .on-image {
