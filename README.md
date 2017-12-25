@@ -24,9 +24,10 @@ This application is a single-page website that advertises a complex type of real
 
 ### Origin
 
-This project is being developed at [Learners Guild][lg] in the course of an apprenticeship in full-stack web development. The project members are/were Learners in the apprenticeship phase, where they work on a mixture of open-source and commercial projects with actual users.
+This project is being developed at [Learners Guild][lg] in the course of an apprenticeship in full-stack web development. The project members are/were Learners in the apprenticeship phase, where they work on a mixture of open-source and commercial projects with actual users, including back-end, front
+end (like this), and full-stack applications.
 
-This application has catalyzed the project members’ further mastery of:
+This application has contributed to the project members’ further mastery of:
 
   - Single-page navigation
   - Web-email integration
@@ -37,7 +38,12 @@ This application has catalyzed the project members’ further mastery of:
   - Responsive design
   - Accessible design
 
-The tools used in the implementation include HTML, CSS, JavaScript, JQuery, [Bootstrap][bs], and [Popper][popper].
+The tools used in the implementation include HTML, CSS, JavaScript, and [Bootstrap][bs].
+
+## Contributing
+
+Work on this application continues.
+
+You are invited to contribute suggested improvements as pull requests at the repository, bug reports and suggestions as issues at the repository, or comments by email using the application’s contact feature. Thank you!
 
 [bs]: http://getbootstrap.com/2.3.2/
-[popper]: https://popper.js.org/
