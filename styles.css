@@ -7,7 +7,7 @@
 
 .bg-image-bldg {
   background: url("resources/images/bldg.jpg") center top no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .bth-color {
