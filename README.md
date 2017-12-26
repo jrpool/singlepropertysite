@@ -38,7 +38,7 @@ This application has contributed to the project members’ further mastery of:
   - Responsive design
   - Accessible design
 
-The tools used in the implementation include HTML, CSS, JavaScript, and [Bootstrap][bs].
+The tools used in the implementation include HTML, CSS, JavaScript, [Bootstrap][bs] (which in turn has JQuery and Popper as dependencies).
 
 ## Contributing
 
