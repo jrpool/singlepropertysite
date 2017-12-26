@@ -19,6 +19,12 @@
   cursor: pointer;
 }
 
+.btn-info:focus {
+  border-width: 3px;
+  border-style: solid;
+  border-color: crimson;
+}
+
 .btn-list {
   padding: 0.1rem 0.3rem;
   border-radius: 0.3rem;
@@ -179,7 +185,7 @@ ul {
 
 section {
   transition-property: opacity;
-  transition-duration: 1.5s;
+  transition-duration: 1s;
   transition-timing-function: ease;
   transition-delay: 0s;
 }

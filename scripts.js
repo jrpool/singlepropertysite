@@ -32,19 +32,36 @@ var creditResize = function() {
 };
 
 var replaceSection = function(replacee, replacer) {
+  var activeElement = document.activeElement;
+  if (activeElement && activeElement.tagName !=='body') {
+    var priorFocus = replacee.querySelector('[had-focus]');
+    if (priorFocus) {
+      priorFocus.removeAttribute('had-focus');
+    }
+    activeElement.setAttribute('had-focus', '');
+  }
   replacer.style.display = 'block';
+  var newActiveElement = replacer.querySelector('[had-focus]');
+  if (newActiveElement) {
+    newActiveElement.focus();
+  }
   window.setTimeout(function() {
     replacer.style.opacity = 1;
   }, 50);
   replacee.style.opacity = 0;
   window.setTimeout(function() {
     replacee.style.display = 'none';
-  }, 1500);
+  }, 1000);
 };
 
 var replaceOnClick = function(trigger, replacee, replacer) {
   trigger.onclick = function() {
     replaceSection(replacee, replacer);
+  };
+  trigger.onkeydown = function(event) {
+    if (event.key === ' ' || event.key === 'Enter') {
+      replaceSection(replacee, replacer);
+    }
   };
 };
 
@@ -67,6 +84,9 @@ window.onload = function() {
     section.style.display = 'block';
     section.style.opacity = 1;
   });
+  document.querySelectorAll('.btn-info').forEach(function(button) {
+    button.setAttribute('tabindex', '0');
+  });
   fontResize();
   creditResize();
   document.querySelectorAll('[dest]').forEach(function(button) {
@@ -77,7 +97,7 @@ window.onload = function() {
     );
   });
   document.querySelectorAll('[pic]').forEach(function(button) {
-    button.onclick = function() {
+    var handler = function() {
       var imageSection = document.querySelector('#images');
       imageSection.querySelector('img').setAttribute(
         'src', 'resources/images/' + button.getAttribute('pic')
@@ -88,10 +108,16 @@ window.onload = function() {
       );
       replaceSection(buttonSection, imageSection);
     };
+    button.onclick = handler;
+    button.onkeydown = function(event) {
+      if (event.key === ' ' || event.key === 'Enter') {
+        handler();
+      }
+    };
   });
   document.querySelectorAll('#members-list > p.list > span.toggle-child')
   .forEach(function(button) {
-    button.onclick = function() {
+    var handler = function() {
       var sublist = button.parentNode.nextElementSibling;
       if (sublist.style.display === 'none') {
         button.innerHTML = 'Hide examples …';
@@ -102,6 +128,12 @@ window.onload = function() {
         button.innerHTML = 'Show examples …';
         sublist.style.display = 'none';
         sublist.style.opacity = 0;
+      }
+    };
+    button.onclick = handler;
+    button.onkeydown = function(event) {
+      if (event.key === ' ' || event.key === 'Enter') {
+        handler();
       }
     };
   });
