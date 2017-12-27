@@ -56,7 +56,34 @@ var replaceSection = function(replacee, replacer) {
     priorReplacerFocus.focus();
   }
   else {
-    replacer.querySelector('.btn-info').focus();
+    var firstListBtn = replacer.querySelector('.btn-list');
+    if (firstListBtn) {
+      firstListBtn.focus();
+    }
+    else {
+      var firstNextBtn = replacer.querySelector('.next');
+      if (firstNextBtn) {
+        firstNextBtn.focus();
+      }
+      else {
+        var firstLgBtn = replacer.querySelector('.btn-lg');
+        if (firstLgBtn) {
+          firstLgBtn.focus();
+        }
+        else {
+          var firstLink = replacer.querySelector('a');
+          if (firstLink) {
+            firstLink.focus();
+          }
+          else {
+            var firstSmBtn = replacer.querySelector('.btn-sm');
+            if (firstSmBtn) {
+              firstSmBtn.focus();
+            }
+          }
+        }
+      }
+    }
   }
 };
 
@@ -93,6 +120,7 @@ window.onload = function() {
   document.querySelectorAll('.btn-info').forEach(function(button) {
     button.setAttribute('tabindex', '0');
   });
+  document.querySelector('#question .btn-info').focus();
   fontResize();
   creditResize();
   document.querySelectorAll('[dest]').forEach(function(button) {
@@ -105,9 +133,8 @@ window.onload = function() {
   document.querySelectorAll('[pic]').forEach(function(button) {
     var handler = function() {
       var imageSection = document.querySelector('#images');
-      imageSection.querySelector('img').setAttribute(
-        'src', 'resources/images/' + button.getAttribute('pic')
-      );
+      imageSection.style['background-image']
+        = 'url(resources/images/' + button.getAttribute('pic') + ')';
       var buttonSection = sectionOf(button);
       replaceOnClick(
         imageSection.firstElementChild, imageSection, buttonSection

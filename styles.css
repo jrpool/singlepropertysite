@@ -5,6 +5,14 @@
   line-height: 1;
 }
 
+.bg-image {
+  background-image: url("");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
 .bg-image-bldg {
   background: url("resources/images/bldg.jpg") center top no-repeat;
   background-size: contain;
@@ -138,8 +146,9 @@ html, body {
 }
 
 img {
-  height: auto;
   width: 100%;
+  height: auto;
+  max-height: 100%;
   max-width: 100%;
 }
 
