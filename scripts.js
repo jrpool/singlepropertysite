@@ -32,19 +32,17 @@ var creditResize = function() {
 };
 
 var replaceSection = function(replacee, replacer) {
+  // Manage focus in old section.
   var activeElement = document.activeElement;
   if (activeElement && activeElement.tagName !=='body') {
-    var priorFocus = replacee.querySelector('[had-focus]');
-    if (priorFocus) {
-      priorFocus.removeAttribute('had-focus');
+    var priorReplaceeFocus = replacee.querySelector('[had-focus]');
+    if (priorReplaceeFocus) {
+      priorReplaceeFocus.removeAttribute('had-focus');
     }
     activeElement.setAttribute('had-focus', '');
   }
+  // Make old section invisible and new one visible.
   replacer.style.display = 'block';
-  var newActiveElement = replacer.querySelector('[had-focus]');
-  if (newActiveElement) {
-    newActiveElement.focus();
-  }
   window.setTimeout(function() {
     replacer.style.opacity = 1;
   }, 50);
@@ -52,6 +50,14 @@ var replaceSection = function(replacee, replacer) {
   window.setTimeout(function() {
     replacee.style.display = 'none';
   }, 1000);
+  // Manage focus in new section.
+  var priorReplacerFocus = replacer.querySelector('[had-focus]');
+  if (priorReplacerFocus) {
+    priorReplacerFocus.focus();
+  }
+  else {
+    replacer.querySelector('.btn-info').focus();
+  }
 };
 
 var replaceOnClick = function(trigger, replacee, replacer) {
