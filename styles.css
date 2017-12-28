@@ -82,6 +82,10 @@
   margin-top: 10vh;
 }
 
+.down-2 {
+  margin-top: 2vh;
+}
+
 .down-5 {
   margin-top: 5vh;
 }
@@ -151,7 +155,8 @@ img {
 }
 
 .leaded,
-.leaded td {
+.leaded td,
+.leaded li {
   padding-bottom: 0.5rem;
 }
 

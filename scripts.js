@@ -88,7 +88,11 @@ var replaceSection = function(replacee, replacer) {
     replacee.style.display = 'none';
   }, 1000);
   setFocusOf(replacer);
-  replacer.firstElementChild.scrollIntoView();
+  var reminder = replacer.querySelector('.reminder');
+  if (reminder) {
+    reminder.scrollIntoView();
+  }
+  replacer.scrollTop = 0;
 };
 
 var replaceOnClick = function(trigger, replacee, replacer) {
@@ -148,7 +152,7 @@ window.onload = function() {
       }
     };
   });
-  document.querySelectorAll('#members-list > p.list > span.toggle-child')
+  document.querySelectorAll('span.toggle-child')
   .forEach(function(button) {
     var handler = function() {
       var sublist = button.parentNode.nextElementSibling;
