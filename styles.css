@@ -150,15 +150,18 @@ img {
   opacity: 0;
 }
 
+.leaded,
+.leaded td {
+  padding-bottom: 0.5rem;
+}
+
 .list,
-p.h1,
-p.h2,
-p.h3,
-p.h4,
 table,
 ul {
+  margin-bottom: 0;
   margin-left: 7vw;
   margin-right: 5vw;
+  line-height: 1;
   text-align: left;
 }
 
@@ -192,9 +195,13 @@ section {
   transition-delay: 0s;
 }
 
-td {
-  padding-left: 1vw;
+.table-btn td:first-child {
+  padding-right: 0.5rem;
 }
+
+/* tr {
+  padding-left: 1vw;
+} */
 
 @keyframes button-pulse {
   from {

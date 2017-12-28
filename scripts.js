@@ -31,6 +31,43 @@ var creditResize = function() {
   }
 };
 
+var setFocusOf = function(section) {
+  var priorFocus = section.querySelector('[had-focus]');
+  if (priorFocus) {
+    priorFocus.focus();
+  }
+  else {
+    var firstListBtn = section.querySelector('.btn-list');
+    if (firstListBtn) {
+      firstListBtn.focus();
+    }
+    else {
+      var firstNextBtn = section.querySelector('.next');
+      if (firstNextBtn) {
+        firstNextBtn.focus();
+      }
+      else {
+        var firstLgBtn = section.querySelector('.btn-lg');
+        if (firstLgBtn) {
+          firstLgBtn.focus();
+        }
+        else {
+          var firstLink = section.querySelector('a');
+          if (firstLink) {
+            firstLink.focus();
+          }
+          else {
+            var firstSmBtn = section.querySelector('.btn-sm');
+            if (firstSmBtn) {
+              firstSmBtn.focus();
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
 var replaceSection = function(replacee, replacer) {
   // Manage focus in old section.
   var activeElement = document.activeElement;
@@ -50,41 +87,8 @@ var replaceSection = function(replacee, replacer) {
   window.setTimeout(function() {
     replacee.style.display = 'none';
   }, 1000);
-  // Manage focus in new section.
-  var priorReplacerFocus = replacer.querySelector('[had-focus]');
-  if (priorReplacerFocus) {
-    priorReplacerFocus.focus();
-  }
-  else {
-    var firstListBtn = replacer.querySelector('.btn-list');
-    if (firstListBtn) {
-      firstListBtn.focus();
-    }
-    else {
-      var firstNextBtn = replacer.querySelector('.next');
-      if (firstNextBtn) {
-        firstNextBtn.focus();
-      }
-      else {
-        var firstLgBtn = replacer.querySelector('.btn-lg');
-        if (firstLgBtn) {
-          firstLgBtn.focus();
-        }
-        else {
-          var firstLink = replacer.querySelector('a');
-          if (firstLink) {
-            firstLink.focus();
-          }
-          else {
-            var firstSmBtn = replacer.querySelector('.btn-sm');
-            if (firstSmBtn) {
-              firstSmBtn.focus();
-            }
-          }
-        }
-      }
-    }
-  }
+  setFocusOf(replacer);
+  replacer.firstElementChild.scrollIntoView();
 };
 
 var replaceOnClick = function(trigger, replacee, replacer) {
@@ -113,14 +117,10 @@ window.onload = function() {
     section.style.display = 'none';
     section.style.opacity = 0;
   });
-  document.querySelectorAll('.initial').forEach(function(section) {
-    section.style.display = 'block';
-    section.style.opacity = 1;
-  });
   document.querySelectorAll('.btn-info').forEach(function(button) {
     button.setAttribute('tabindex', '0');
   });
-  document.querySelector('#question .btn-info').focus();
+  setFocusOf(document.querySelector('#question'));
   fontResize();
   creditResize();
   document.querySelectorAll('[dest]').forEach(function(button) {
