@@ -74,6 +74,10 @@
   font-size: 1.5vw;
 }
 
+.do {
+  display: inline;
+}
+
 .down-15 {
   margin-top: 15vh;
 }
@@ -204,9 +208,9 @@ section {
   padding-right: 0.5rem;
 }
 
-/* tr {
-  padding-left: 1vw;
-} */
+.undo {
+  display: none;
+}
 
 @keyframes button-pulse {
   from {

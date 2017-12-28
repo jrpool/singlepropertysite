@@ -157,12 +157,14 @@ window.onload = function() {
     var handler = function() {
       var sublist = button.parentNode.nextElementSibling;
       if (sublist.style.display === 'none') {
-        button.innerHTML = 'Hide examples …';
+        button.querySelector('.do').style.display = 'none';
+        button.querySelector('.undo').style.display = 'inline';
         sublist.style.display = 'block';
         sublist.style.opacity = 1;
       }
       else {
-        button.innerHTML = 'Show examples …';
+        button.querySelector('.do').style.display = 'inline';
+        button.querySelector('.undo').style.display = 'none';
         sublist.style.display = 'none';
         sublist.style.opacity = 0;
       }
