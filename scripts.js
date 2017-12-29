@@ -141,7 +141,7 @@ var toggleVerbosityOnClick = function(button) {
 // Handler utility.
 var showPicOf = function(tourSection, newStop) {
   tourSection.setAttribute('stop', newStop);
-  tourSection.style.background-image
+  tourSection.style['background-image']
     = 'url(resources/images/' + tourData[newStop][0] + ')';
   tourSection.querySelector('.carousel-caption').textContent
     = tourData[newStop][1];
@@ -216,10 +216,6 @@ var showPicOnClick = function(button) {
   };
 };
 
-var nextPic = function(currentTourStop) {
-  if (currentTourStop === )
-};
-
 // When the page is retrieved or refreshed:
 window.onload = function() {
   // Make all initially hidden sections invisible.
@@ -249,18 +245,11 @@ window.onload = function() {
   // Create data on tour stops.
   var tourData = picSpans.map(function(picSpan) {
     return [
-      picSpan.getAttributeOf('pic'), sectionOf(picSpan).getAttributeOf('tour-intro')
+      picSpan.getAttribute('pic'), sectionOf(picSpan).getAttribute('tour-intro')
     ].filter(function(element) {
       return element[1];
     });
   });
-  // Initialize tour section.
-  document
-  .querySelector('#tour > [dest-pic]')
-  .setAttribute('dest-pic', tourData[0][0]);
-  document
-  .querySelector('#tour > .carousel-caption')
-  .textContent = tourData[0][1];
   // Create listeners for tour navigation buttons.
   Array.from(document.querySelectorAll('.next-pic'))
   .forEach(function(button) {
@@ -269,6 +258,7 @@ window.onload = function() {
   Array.from(document.querySelectorAll('.prior-pic'))
   .forEach(function(button) {
     showPriorPicOnClick(button, tourData);
+  });
   // Create listeners for buttons that toggle verbosity.
   Array.from(document.querySelectorAll('span.toggle-child'))
   .forEach(toggleVerbosityOnClick);
