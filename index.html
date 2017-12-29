@@ -19,13 +19,11 @@
   <body>
 
     <section id="question" class="frame initial">
-      <div class="down-5 h1">If you hope to find:</div>
+      <div class="down-5 h1">If you hope to buy:</div>
       <table class="down-5 leaded table-btn h3">
-        <tr><td>☑</td><td>An apartment home</td></tr>
-        <tr><td>☑</td><td>In a senior building</td></tr>
-        <tr><td>☑</td><td>Where there’s a real community</td></tr>
-        <tr><td>☑</td><td>In the Bay Area, close-in</td></tr>
-        <tr><td>☑</td><td>In a diverse walkable milieu</td></tr>
+        <tr><td>☑</td><td>An apartment in a senior building</td></tr>
+        <tr><td>☑</td><td>With an active community life</td></tr>
+        <tr><td>☑</td><td>In a vibrant Bay-Area city</td></tr>
         <tr><td>☑</td><td>Affordable not just for the 1%</td></tr>
         <tr><td>☑</td><td>Available now—no waiting list</td></tr>
       </table>
@@ -189,8 +187,11 @@
       </span></p>
     </section>
 
-    <section id="tour" class="frame later bg-image">
+    <section id="tour" class="frame later bg-image" stop="0">
       <p class="back btn-sm btn-info" dest="choice">▲<br>Stop<br>tour</p>
+      <p class="next-pic btn-sm btn-info">Next pic ▶</p>
+      <p class="prior-pic btn-sm btn-info">◀ Prior pic</p>
+      <p class="carousel-caption"></p>
     </section>
 
     <section id="images" class="frame later bg-image">
@@ -295,7 +296,8 @@
       </span></p>
     </section>
 
-    <section id="life-list" class="frame later text-on-image">
+    <section id="life-list" class="frame later text-on-image"
+      tour-intro="BTH residents organize activities like …">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"
@@ -434,6 +436,10 @@
           You own a share of the corporation, which owns the entire
           property.
         </li>
+        <li>
+          Directors budget and charge members monthly assessments to cover
+          costs.
+        </li>
       </ul>
       <p class="down-2 h3">Becoming a member:</p>
       <ul class="list leaded h5">
@@ -466,7 +472,8 @@
       </span></p>
     </section>
 
-    <section id="gov-list" class="frame later">
+    <section id="gov-list" class="frame later"
+      tour-intro="BTH members help run the co-op. They …">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"
@@ -479,21 +486,19 @@
       </p>
       <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
       <p class="h1">Help run the co-op.</p>
-      <p class="h4">How it works:</p>
+      <p class="h4">How members participate:</p>
       <ul class="list leaded h5">
-        <li>Co-op members elect directors.</li>
-        <li>Directors appoint officers, committees, contractors, employees.</li>
-        <li>Directors approve new BTH members.</li>
-        <li>Directors budget and charge members monthly assessments to cover costs.</li>
+        <li>Elect directors.</li>
+        <li>Advise directors on appointments of officers, committees, contractors, employees, approval of new BTH members, and budgets.</li>
         <li>
-          Directors meet at least once a month.
+          Attend board meetings.
           <span id="btn-gov-board" pic="board.png" class="btn-list btn-info">
             pic
           </span>
         </li>
-        <li>Members vote on any changes in fundamental rules.</li>
+        <li>Vote on any changes in fundamental rules.</li>
         <li>
-          Directors vote on subsidiary operating rules.
+           Advise the Board on proposed changes in operating rules.
           <span id="btn-gov-rules" pic="rules.png" class="btn-list btn-info">
             pic
           </span>
@@ -580,7 +585,8 @@
       </span></p>
     </section>
 
-    <section id="common-list" class="frame later">
+    <section id="common-list" class="frame later"
+      tour-intro="Amenities available to members:">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"
@@ -786,7 +792,8 @@
       </span></p>
     </section>
 
-    <section id="walk-list" class="frame later">
+    <section id="walk-list" class="frame later"
+      tour-intro="Walkable destinations:">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"
@@ -1040,7 +1047,7 @@
       </span></p>
     </section>
 
-    <section id="apt2c" class="frame later">
+    <section id="apt2c" class="frame later" tour-intro="About Apartment 2C:">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"

@@ -184,10 +184,22 @@ ul {
   right: 20px;
 }
 
+.next-pic {
+  position: fixed;
+  top: 50vh;
+  right: 20px;
+}
+
 .on-image {
   border-radius: 6px;
   padding: 0.1em 0.3em;
   background-color: #ffffffcc;
+}
+
+.prior-pic {
+  position: fixed;
+  top: 50vh;
+  left: 2px;
 }
 
 .reminder {
