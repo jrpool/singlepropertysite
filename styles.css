@@ -40,6 +40,18 @@
   cursor: pointer;
 }
 
+.btn-mid-left {
+  position: fixed;
+  top: 50vh;
+  left: 2px;
+}
+
+.btn-mid-right {
+  position: fixed;
+  top: 50vh;
+  right: 20px;
+}
+
 .btn-pulsing {
   z-index: 1050;
   animation-name: button-pulse;
@@ -78,12 +90,12 @@
   display: inline;
 }
 
-.down-15 {
-  margin-top: 15vh;
-}
-
 .down-10 {
   margin-top: 10vh;
+}
+
+.down-15 {
+  margin-top: 15vh;
 }
 
 .down-2 {
@@ -184,22 +196,10 @@ ul {
   right: 20px;
 }
 
-.next-pic {
-  position: fixed;
-  top: 50vh;
-  right: 20px;
-}
-
 .on-image {
   border-radius: 6px;
   padding: 0.1em 0.3em;
   background-color: #ffffffcc;
-}
-
-.prior-pic {
-  position: fixed;
-  top: 50vh;
-  left: 2px;
 }
 
 .reminder {
@@ -218,6 +218,26 @@ section {
 
 .table-btn td:first-child {
   padding-right: 0.5rem;
+}
+
+.tour-caption {
+  position: fixed;
+  bottom: 2px;
+  left: 50vw;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 0.1em 0.3em;
+  border-color: gray;
+  background-color: #ffff00aa;
+}
+
+.tour-title {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%);
 }
 
 .undo {

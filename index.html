@@ -20,15 +20,15 @@
 
     <section id="question" class="frame initial">
       <div class="down-5 h1">If you hope to buy:</div>
-      <table class="down-5 leaded table-btn h3">
+      <table class="down-2 leaded table-btn h3">
         <tr><td>☑</td><td>An apartment in a senior building</td></tr>
-        <tr><td>☑</td><td>With an active community life</td></tr>
+        <tr><td>☑</td><td>With an active owner community</td></tr>
         <tr><td>☑</td><td>In a vibrant Bay-Area city</td></tr>
         <tr><td>☑</td><td>Affordable not just for the 1%</td></tr>
         <tr><td>☑</td><td>Available now—no waiting list</td></tr>
       </table>
       <div class="h4 list leaded"><em>… then no, you haven’t lost your grip on reality.</em></div>
-      <div class="h1 leaded">It really exists!</div>
+      <div class="h1 leaded">It exists!</div>
       <p class="down-5">
         <span class="btn-lg btn-info btn-pulsing had-focus" dest="answer">
           Unbelievable. Show me.
@@ -73,14 +73,20 @@
       </p>
       <p class="down-5 h2">What’s available there?</p>
       <p class="h3">Apartment 2C (1-bedroom) is available.</p>
-      <p class="down-5 h2">More info? Choose a style:</p>
+      <p class="down-5 h2">More info? Choose how:</p>
       <p class="leaded"><span class="btn-lg btn-info btn-pulsing" dest="details">
         Let me browse
       </span></p>
       <p class="leaded">
-        <span class="next-pic btn-lg btn-info btn-pulsing" dest="tour">
+        <span
+          class="next-pic btn-lg btn-info btn-pulsing"
+          dest="tour"
+        >
           Take me on a tour
         </span>
+      </p>
+      <p class="h5">
+        (Hint: You can press<br>[space] or [return] or [enter]<br>to click a button.)
       </p>
     </section>
 
@@ -133,7 +139,7 @@
               Show&nbsp;details&nbsp;…
             </span>
           </td>
-          <td>Co-own a pioneering co-op</td>
+          <td>Co-own a pioneering co‑op</td>
         </tr>
         <tr>
           <td>
@@ -145,7 +151,7 @@
               Show&nbsp;details&nbsp;…
             </span>
           </td>
-          <td>Help run the co-op</td>
+          <td>Help run the co‑op</td>
         </tr>
         <tr>
           <td>
@@ -191,9 +197,14 @@
 
     <section id="tour" class="frame later bg-image" stop="-1">
       <p class="back btn-sm btn-info" dest="choice">▲<br>Stop<br>tour</p>
-      <p class="next-pic btn-sm btn-info">Next pic ▶</p>
-      <p class="prior-pic btn-sm btn-info">◀ Prior pic</p>
-      <p class="carousel-caption"></p>
+      <p class="prior-pic btn-mid-left btn-sm btn-info">◀ Prior pic</p>
+      <p
+        class="next-pic btn-mid-right btn-lg btn-info btn-pulsing"
+      >
+        Next pic ▶
+      </p>
+      <p class="tour-title h3"></p>
+      <p class="tour-caption"></p>
     </section>
 
     <section id="images" class="frame later bg-image">
@@ -285,7 +296,7 @@
         <li>Celebrate a 104th birthday</li>
         <li>Get elected as a director of a local history society</li>
         <li>Contribute personal papers to university archives</li>
-        <li>Help get a law passed by the California legislature</li>
+        <li>Help get a California law enacted</li>
         <li>Work part-time on the UC Berkeley campus</li>
         <li>Protest government policies</li>
         <li>Travel to Antarctica</li>
@@ -426,8 +437,8 @@
         Next ▶
       </p>
       <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
-      <p class="h1">Co-own a<br>pioneering co-op.</p>
-      <p class="down-2 h3">About this co-op:</p>
+      <p class="h1">Co-own a<br>pioneering co‑op.</p>
+      <p class="down-2 h3">About this co‑op:</p>
       <ul class="list leaded h5">
         <li>Founded in 1960.</li>
         <li>The U.S.’s first-ever senior housing cooperative!</li>
@@ -460,7 +471,7 @@
           >National Cooperative Bank</a>
           or <a href=
             "https://www.firstrepublic.com/personal/residential-lending/single-family-coop-and-condo-home-loans"
-          >First Republic</a> for a co-op home loan (“share loan”).
+          >First Republic</a> for a co‑op home loan (“share loan”).
         </li>
         <li>
           You get screened, interviewed, and approved by the BTH directors.
@@ -475,7 +486,7 @@
     </section>
 
     <section id="gov-list" class="frame later"
-      tour-intro="BTH members help run the co-op. They …">
+      tour-intro="BTH members help run the co‑op. They …">
       <p
         class="back btn-sm btn-info"
         title="Back to BTH features"
@@ -487,13 +498,13 @@
         Next ▶
       </p>
       <p class="down-5"><span class="reminder h4">At BTH, you can …</span></p>
-      <p class="h1">Help run the co-op.</p>
+      <p class="h1">Help run the co‑op.</p>
       <p class="h4">How members participate:</p>
       <ul class="list leaded h5">
         <li>Elect directors.</li>
         <li>Advise directors on appointments of officers, committees, contractors, employees, approval of new BTH members, and budgets.</li>
         <li>
-          Attend board meetings.
+          Exchange information and ideas at board meetings.
           <span id="btn-gov-board" pic="board.png" class="btn-list btn-info">
             pic
           </span>
@@ -514,12 +525,12 @@
       </ul>
       <p class="leaded h4">You can also join those who:</p>
       <ul class="list leaded h5">
-        <li>Discuss issues facing the co-op
+        <li>Discuss issues facing the co‑op
           <span id="btn-gov-dem" pic="dem.jpg" class="btn-list btn-info">
             pic
           </span>
         </li>
-        <li>Examine co-op finances
+        <li>Examine co‑op finances
           <span
             id="btn-gov-finance"
             pic="finance.png"
@@ -1023,25 +1034,29 @@
         </span>
       </p>
       <ul class="list leaded h4 later">
-        <li>Botanical Gardens
+        <li>
+          Botanical Gardens
           <span id="btn-walk-bot" pic="bot.jpg" class="btn-list btn-info">
             pic
           </span>
         </li>
-        <li>People's Park
+        <li>
+          People's Park
           <span id="btn-walk-park" pic="park.jpg" class="btn-list btn-info">
             pic
           </span>
         </li>
-        <li>Tilden Regional Park
+        <li>
+          Tilden Regional Park
           <span id="btn-walk-tilden" pic="tilden.jpg" class="btn-list btn-info">
             pic
           </span>
         </li>
       </ul>
       <p class="down-5">
+        Map of BTH neighborhood
         <span class="btn-lg btn-info btn-pulsing" pic="map.png">
-          Show me on a map
+          Map
         </span>
       </p>
       <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
@@ -1080,7 +1095,7 @@
           </span>
         </li>
         <li>
-          1 bedroom, living/dining room, kitchen area, bathroom, foyer
+          1 bedroom, living/dining room, kitchen area, bathroom, foyer,
           sunroom
           <span
             id="btn-apt-layout"

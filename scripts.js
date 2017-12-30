@@ -98,16 +98,18 @@ var replaceSection = function(replacee, replacer) {
   }
   replacer.scrollTop = 0;
 };
-// Define listeners.
+/*
+  Define listeners. Using addEventListener so tour-start button can have 2 each.
+*/
 var replaceOnClick = function(trigger, replacee, replacer) {
-  trigger.onclick = function() {
+  trigger.addEventListener('click', function() {
     replaceSection(replacee, replacer);
-  };
-  trigger.onkeydown = function(event) {
+  });
+  trigger.addEventListener('keydown', function(event) {
     if (event.key === ' ' || event.key === 'Enter') {
       replaceSection(replacee, replacer);
     }
-  };
+  });
 };
 
 // Define listeners and handler for verbosity toggling.
@@ -129,7 +131,9 @@ var toggleVerbosity = function(button) {
 };
 // Listeners.
 var toggleVerbosityOnClick = function(button) {
-  button.onclick = toggleVerbosity;
+  button.onclick = function() {
+    toggleVerbosity(button);
+  };
   button.onkeydown = function(event) {
     if (event.key === ' ' || event.key === 'Enter') {
       toggleVerbosity(button);
@@ -139,37 +143,46 @@ var toggleVerbosityOnClick = function(button) {
 
 // Define listeners and handlers for a tour stop.
 // Handler utility.
-var showPicOf = function(tourSection, newStop) {
+var showPicOf = function(tourData, tourSection, newStop) {
   tourSection.setAttribute('stop', newStop);
-  tourSection.style['background-image']
-    = 'url(resources/images/' + tourData[newStop][0] + ')';
-  tourSection.querySelector('.carousel-caption').textContent
-    = tourData[newStop][1];
+  var titleParagraph = tourSection.querySelector('.tour-title');
+  var captionParagraph = tourSection.querySelector('.tour-caption');
+  if (tourData[newStop][0]) {
+    tourSection.style['background-image']
+      = 'url(resources/images/' + tourData[newStop][0] + ')';
+    titleParagraph.innerHTML = '';
+    captionParagraph.innerHTML = tourData[newStop][1];
+  }
+  else {
+    tourSection.style['background-image'] = '';
+    titleParagraph.innerHTML = tourData[newStop][1];
+    captionParagraph.innerHTML = '';
+  }
 };
 // Handler for next.
 var showNextPic = function(tourData) {
   var tourSection = document.querySelector('#tour');
   var tourStop = Number.parseInt(tourSection.getAttribute('stop'));
   var nextStop = tourStop === tourData.length - 1 ? 0 : tourStop + 1;
-  showPicOf(tourSection, nextStop);
+  showPicOf(tourData, tourSection, nextStop);
 };
 // Handler for prior.
 var showPriorPic = function(tourData) {
   var tourSection = document.querySelector('#tour');
   var tourStop = Number.parseInt(tourSection.getAttribute('stop'));
   var priorStop = tourStop === 0 ? tourData.length - 1 : tourStop - 1;
-  showPicOf(tourSection, priorStop);
+  showPicOf(tourData, tourSection, priorStop);
 };
-// Listeners.
+// Listeners. Using addEventListener so tour-start button can have 2 each.
 var showNextPicOnClick = function(button, tourData) {
-  button.onclick = function() {
+  button.addEventListener('click', function() {
     showNextPic(tourData);
-  };
-  button.onkeydown = function(event) {
+  });
+  button.addEventListener('keydown', function(event) {
     if (event.key === ' ' || event.key === 'Enter') {
       showNextPic(tourData);
     }
-  }
+  });
 }
 var showPriorPicOnClick = function(button, tourData) {
   button.onclick = function() {
@@ -179,7 +192,7 @@ var showPriorPicOnClick = function(button, tourData) {
     if (event.key === ' ' || event.key === 'Enter') {
       showPriorPic(tourData);
     }
-  }
+  };
 }
 
 // Define a function to identify an element’s section.
@@ -208,7 +221,9 @@ var showPic = function(button) {
 };
 // Listeners.
 var showPicOnClick = function(button) {
-  button.onclick = showPic;
+  button.onclick = function() {
+    showPic(button);
+  };
   button.onkeydown = function(event) {
     if (event.key === ' ' || event.key === 'Enter') {
       showPic(button);
@@ -240,15 +255,26 @@ window.onload = function() {
     );
   });
   // Create listeners for picture-showing buttons.
-  var picSpans = Array.from(document.querySelectorAll('[pic]'));
-  picSpans.forEach(showPicOnClick);
+  var picSpans = Array.from(document.querySelectorAll('[pic], [tour-intro]'));
+  picSpans.forEach(function(button) {
+    if (button.hasAttribute('pic')) {
+      showPicOnClick(button);
+    }
+  });
   // Create data on tour stops.
   var tourData = picSpans.map(function(picSpan) {
-    return [
-      picSpan.getAttribute('pic'), sectionOf(picSpan).getAttribute('tour-intro')
-    ].filter(function(element) {
-      return element[1];
-    });
+    if (picSpan.hasAttribute('pic')) {
+      return [
+        picSpan.getAttribute('pic'),
+        sectionOf(picSpan).getAttribute('tour-intro') + '<br>'
+          + picSpan.parentElement.firstChild.textContent.trim()
+      ].filter(function(element) {
+        return element[1];
+      });
+    }
+    else {
+      return ['', picSpan.getAttribute('tour-intro')];
+    }
   });
   // Create listeners for tour navigation buttons.
   Array.from(document.querySelectorAll('.next-pic'))
