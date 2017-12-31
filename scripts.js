@@ -5,7 +5,7 @@ var fontResize = function() {
   [['.h1', 'h1'], ['.h2', 'h2'], ['.h3', 'h3'], ['.h4', 'h4'], ['.h5', 'h5']]
   .forEach(function(spec) {
     var targetElements = Array.from(document.querySelectorAll(spec[0]));
-    if (window.innerWidth > 500) {
+    if (window.innerWidth > 700) {
       targetElements.forEach(function(element) {
         element.classList.remove(spec[1] + '-minimum');
         element.classList.add(spec[1] + '-proportional');
