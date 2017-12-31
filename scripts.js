@@ -73,31 +73,36 @@ var setFocusOf = function(section) {
 
 // Define listeners and handler for a button navigating between sections.
 var replaceSection = function(replacee, replacer) {
-  // Manage focus in old section.
-  var activeElement = document.activeElement;
-  if (activeElement && activeElement.tagName !=='body') {
-    var priorReplaceeFocus = replacee.querySelector('[had-focus]');
-    if (priorReplaceeFocus) {
-      priorReplaceeFocus.removeAttribute('had-focus');
+  // Perform only if no transition in progress.
+  if (document.body.getAttribute('transition') === 'off') {
+    document.body.setAttribute('transition', 'on');
+    // Manage focus in old section.
+    var activeElement = document.activeElement;
+    if (activeElement && activeElement.tagName !=='body') {
+      var priorReplaceeFocus = replacee.querySelector('[had-focus]');
+      if (priorReplaceeFocus) {
+        priorReplaceeFocus.removeAttribute('had-focus');
+      }
+      activeElement.setAttribute('had-focus', '');
     }
-    activeElement.setAttribute('had-focus', '');
-  }
-  // Make old section invisible and new one visible.
-  replacer.style.display = 'block';
-  window.setTimeout(function() {
-    replacer.style.opacity = 1;
-  }, 50);
-  replacee.style.opacity = 0;
-  window.setTimeout(function() {
-    replacee.style.display = 'none';
-  }, 1000);
-  setFocusOf(replacer);
-  var reminder = replacer.querySelector('.reminder');
-  if (reminder) {
-    reminder.scrollIntoView();
-  }
-  replacer.scrollTop = 0;
-};
+    // Make old section invisible and new one visible.
+    replacer.style.display = 'block';
+    window.setTimeout(function() {
+      replacer.style.opacity = 1;
+    }, 50);
+    replacee.style.opacity = 0;
+    window.setTimeout(function() {
+      replacee.style.display = 'none';
+      setFocusOf(replacer);
+      document.body.setAttribute('transition', 'off');
+    }, 500);
+    var reminder = replacer.querySelector('.reminder');
+    if (reminder) {
+      reminder.scrollIntoView();
+    }
+    replacer.scrollTop = 0;
+  };
+}
 /*
   Define listeners. Using addEventListener so tour-start button can have 2 each.
 */
@@ -173,7 +178,10 @@ var showPriorPic = function(tourData) {
   var priorStop = tourStop === 0 ? tourData.length - 1 : tourStop - 1;
   showPicOf(tourData, tourSection, priorStop);
 };
-// Listeners. Using addEventListener so tour-start button can have 2 each.
+/*
+  Listeners. Using addEventListener so tour-start button can have 2 each
+  (one to replace section and one to show next pic).
+*/
 var showNextPicOnClick = function(button, tourData) {
   button.addEventListener('click', function() {
     showNextPic(tourData);
@@ -254,10 +262,14 @@ window.onload = function() {
       document.querySelector('#' + button.getAttribute('dest'))
     );
   });
-  // Create listeners for picture-showing buttons.
+  // Create contents of and listeners for picture-showing buttons.
   var picSpans = Array.from(document.querySelectorAll('[pic], [tour-intro]'));
   picSpans.forEach(function(button) {
     if (button.hasAttribute('pic')) {
+      button.innerHTML
+        = '<img src="resources/images/'
+        + button.getAttribute('pic')
+        + '" class="mini-image">';
       showPicOnClick(button);
     }
   });

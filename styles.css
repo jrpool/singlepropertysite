@@ -186,6 +186,12 @@ ul {
   text-align: left;
 }
 
+.mini-image {
+  max-height: 2vw;
+  width: auto;
+  vertical-align: top;
+}
+
 .next {
   line-height: 1.5;
 }
@@ -211,7 +217,7 @@ ul {
 
 section {
   transition-property: opacity;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
   transition-delay: 0s;
 }
