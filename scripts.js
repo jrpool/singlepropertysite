@@ -151,16 +151,18 @@ var toggleVerbosityOnClick = function(button) {
 var showPicOf = function(tourData, tourSection, newStop) {
   tourSection.setAttribute('stop', newStop);
   var titleParagraph = tourSection.querySelector('.tour-title');
-  var captionParagraph = tourSection.querySelector('.tour-caption');
+  var captionParagraph = tourSection.querySelector('#tour-caption');
   if (tourData[newStop][0]) {
     tourSection.style['background-image']
       = 'url(resources/images/' + tourData[newStop][0] + ')';
     titleParagraph.innerHTML = '';
+    captionParagraph.classList.add('tour-caption');
     captionParagraph.innerHTML = tourData[newStop][1];
   }
   else {
     tourSection.style['background-image'] = '';
     titleParagraph.innerHTML = tourData[newStop][1];
+    captionParagraph.classList.remove('tour-caption');
     captionParagraph.innerHTML = '';
   }
 };
@@ -205,12 +207,17 @@ var showPriorPicOnClick = function(button, tourData) {
 
 // Define a function to identify an element’s section.
 var sectionOf = function(element) {
-  var parent = element.parentElement;
-  if (parent.tagName === 'SECTION') {
-    return parent;
+  if (element.tagName === 'SECTION') {
+    return element;
   }
   else {
-    return sectionOf(parent);
+    var parent = element.parentElement;
+    if (parent.tagName === 'SECTION') {
+      return parent;
+    }
+    else {
+      return sectionOf(parent);
+    }
   }
 };
 
@@ -239,6 +246,21 @@ var showPicOnClick = function(button) {
   };
 };
 
+// Define listeners and handler for a mail-sending button.
+// Handler.
+// Listeners.
+var sendMailOnClick = function(button) {
+  var specs = button.getAttribute('mailto');
+  button.onclick = function() {
+    document.location.href = 'mailto:' + specs;
+  };
+  button.onkeydown = function(event) {
+    if (event.key === ' ' || event.key === 'Enter') {
+      document.location.href = 'mailto:' + specs;
+    }
+  };
+};
+
 // When the page is retrieved or refreshed:
 window.onload = function() {
   // Make all initially hidden sections invisible.
@@ -263,29 +285,44 @@ window.onload = function() {
     );
   });
   // Create contents of and listeners for picture-showing buttons.
-  var picSpans = Array.from(document.querySelectorAll('[pic], [tour-intro]'));
-  picSpans.forEach(function(button) {
-    if (button.hasAttribute('pic')) {
-      button.innerHTML
+  var tourStops = Array.from(document.querySelectorAll('[pic], [tour-intro]'));
+  tourStops.forEach(function(stop) {
+    if (stop.hasAttribute('pic')) {
+      stop.innerHTML
         = '<img src="resources/images/'
-        + button.getAttribute('pic')
+        + stop.getAttribute('pic')
         + '" class="mini-image">';
-      showPicOnClick(button);
+      showPicOnClick(stop);
     }
   });
   // Create data on tour stops.
-  var tourData = picSpans.map(function(picSpan) {
-    if (picSpan.hasAttribute('pic')) {
-      return [
-        picSpan.getAttribute('pic'),
-        sectionOf(picSpan).getAttribute('tour-intro') + '<br>'
-          + picSpan.parentElement.firstChild.textContent.trim()
-      ].filter(function(element) {
-        return element[1];
-      });
+  var tourData = tourStops.map(function(tourStop) {
+    var picSection
+      = tourStop.hasAttribute('tour-intro')
+      ? tourStop
+      : sectionOf(tourStop);
+    var picIntro = picSection.getAttribute('tour-intro');
+    if (tourStop.hasAttribute('pic')) {
+      var specifics = tourStop.parentElement.firstChild.textContent.trim();
+      var caption
+        = (picIntro && specifics)
+        ? '<span class="reminder">' + picIntro
+          + '</span><br><strong>' + specifics + '</strong>'
+        : '';
+      return [tourStop.getAttribute('pic'), caption];
     }
     else {
-      return ['', picSpan.getAttribute('tour-intro')];
+      if (tourStop.hasAttribute('tour-start-intro')) {
+        return [
+          '',
+          '<em>' + tourStop.getAttribute('tour-start-intro')
+          + '</em><br>'
+          + picIntro
+        ];
+      }
+      else {
+        return ['', picIntro];
+      }
     }
   });
   // Create listeners for tour navigation buttons.
@@ -300,6 +337,9 @@ window.onload = function() {
   // Create listeners for buttons that toggle verbosity.
   Array.from(document.querySelectorAll('span.toggle-child'))
   .forEach(toggleVerbosityOnClick);
+  // Create listeners for mail-sending buttons.
+  Array.from(document.querySelectorAll('[mailto]'))
+  .forEach(sendMailOnClick);
 };
 
 window.onresize = function() {

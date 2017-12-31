@@ -48,13 +48,13 @@
         <span class="h1">Voilà!<br><span class="bth-color">Berkeley Town House</span></span>
       </p>
       <p class="down-10">
-        <span class="btn-lg btn-info btn-pulsing" dest="choice">
+        <span class="btn-lg btn-info btn-pulsing" dest="summary">
           Tell me more!
         </span>
       </p>
     </section>
 
-    <section id="choice" class="frame later">
+    <section id="summary" class="frame later">
       <p
         class="back btn-sm btn-info"
         title="Back to building photo"
@@ -68,36 +68,80 @@
         </span>
       </p>
       <p class="down-5 h2">What is it?</p>
-      <p class="h3">
-        The U.S.’s first senior housing cooperative!<br>
+      <p class="list h5">
+        Berkeley Town House (BTH) is the oldest senior housing
+        cooperative in the U.S.! A co-op is like a condo association, only
+        <em>better</em>. Why? Because co-op members own the building
+        together, work together to run it, and form a friendly, supportive
+        community.
       </p>
-      <p class="leaded">
-        <span class="btn-lg btn-info btn-pulsing" dest="details">
-          Details …
-        </span>
-      </p>
+      <p class="down-2 list h5">
+        UC Berkeley and many other treasures are an easy walk from BTH.
       <p class="down-5 h2">What’s available?</p>
-      <p class="h3">Apartment 2C (1-bedroom) is available.</p>
-      <p class="leaded">
-        <span class="btn-lg btn-info btn-pulsing" dest="apt2c">
-          Details …
-        </span>
+      <p class="list h5">
+        A few apartments are now available. This website advertises
+        apartment 2C (1-bedroom). It has all-new kitchen, bathroom,
+        wiring, and lighting.
       </p>
-      <p class="down-5 h2">Or start with a …</p>
-      <p><span class="next-pic btn-lg btn-info btn-pulsing" dest="tour">
-        Picture tour
-      </span></p>
-      <p class="h5">
-        (Hint: [space], [return], or [enter]<br>
-        clicks the current button.)
-      </p>
+      <p class="down-5 h2">What next?</p>
+      <p class="list h4">Take your pick:</p>
+      <table class="table-btn leaded h5">
+        <tr>
+          <td>
+            <span
+              id="bth-more"
+              class="btn-list btn-info h5"
+              dest="details"
+            >
+              ●
+            </span>
+          </td>
+          <td>Show me more information about BTH.</td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              id="2c-more"
+              class="btn-list btn-info h5"
+              dest="apt2c"
+            >
+              ●
+            </span>
+          </td>
+          <td>Show me more information about apartment 2C.</td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              id="tour-more"
+              class="next-pic btn-list btn-info h5"
+              dest="tour"
+            >
+              ●
+            </span>
+          </td>
+          <td>Take me on a picture tour of BTH and the apartment.</td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              id="contact-more"
+              class="btn-list btn-info h5"
+              mailto="pool@stulta.com?subject=BTH&amp;body=Please%20contact%20me%20about%20Apartment%202C%20at%20BTH.%0d%0aMy%20name%20(if%20not%20above):%0d%0aMy%20email%20address%20(if%20different%20from%20above):%0d%0aMy%20telephone%20(optional):"
+            >
+              ●
+            </span>
+          </td>
+          <td>Please contact me.</td>
+        </tr>
+      </table>
     </section>
 
     <section id="details" class="frame later">
       <p
         class="back btn-sm btn-info"
         title="Back to intro"
-        dest="choice"
+        dest="summary"
       >
         ▲<br>Back
       </p>
@@ -199,7 +243,7 @@
     </section>
 
     <section id="tour" class="frame later bg-image" stop="-1">
-      <p class="back btn-sm btn-info" dest="choice">▲<br>Stop<br>tour</p>
+      <p class="back btn-sm btn-info" dest="summary">▲<br>Stop<br>tour</p>
       <p class="prior-pic btn-mid-left btn-sm btn-info">◀ Prior pic</p>
       <p
         class="next-pic btn-mid-right btn-lg btn-info btn-pulsing"
@@ -207,7 +251,7 @@
         Next pic ▶
       </p>
       <p class="tour-title h3"></p>
-      <p class="tour-caption"></p>
+      <p id="tour-caption"></p>
     </section>
 
     <section id="images" class="frame later bg-image">
@@ -313,6 +357,7 @@
     </section>
 
     <section id="life-list" class="frame later text-on-image"
+      tour-start-intro="<em>START OF TOUR:</em>"
       tour-intro="BTH residents organize activities like …">
       <p
         class="back btn-sm btn-info"
@@ -1071,7 +1116,7 @@
       <p
         class="back btn-sm btn-info"
         title="Back to basic info"
-        dest="choice"
+        dest="summary"
       >
         ▲<br>Back
       </p>
@@ -1118,7 +1163,7 @@
       </p>
       <ul class="list leaded later h5">
         <li>
-          Plans
+          Permit-stamped remodeling plans
           <span
             id="btn-apt-remodel09"
             pic="remodel09.png"
@@ -1155,7 +1200,7 @@
       </p>
       <ul class="list leaded later h5">
         <li>
-          Completely remodeled
+          Kitchen completely remodeled
           <span
             id="btn-apt-kitchen"
             pic="kitchen.jpg"
@@ -1184,7 +1229,7 @@
           </span>
         </li>
         <li>
-          Tall cabinets (no particle board)
+          Tall kitchen cabinets (no particle board)
           <span id="btn-apt-kitcab" pic="kitcab.jpg" class="btn-list btn-info">
             pic
           </span>
@@ -1205,7 +1250,7 @@
       </p>
       <ul class="list leaded later h5">
         <li>
-          New cabinetry (no particle board)
+          New bathroom cabinetry (no particle board)
           <span
             id="btn-apt-bathcab"
             pic="bathcab.jpg"
@@ -1271,31 +1316,6 @@
         </li>
       </ul>
       <p class="list leaded h3">
-        Notes on current condition:
-        <span class="toggle-child btn-list btn-info h5">
-          <span class="do">Show&nbsp;details&nbsp;…</span>
-          <span class="undo">Hide&nbsp;details&nbsp;…</span>
-        </span>
-      </p>
-      <ul class="list leaded later h5">
-        <li>
-          Sunroom partitions may be noncompliant with applicable building code.
-        </li>
-        <li>
-          Lighting fixture on a receptacle circuit may be noncompliant with
-          applicable building code.
-        <li>
-          Building-standard textured ceiling plaster contains 1–3% asbestos,
-          paint-encapsulated.
-        </li>
-        <li>
-          Drywall partition paint finish contains patched scars and
-          discoloration.
-        </li>
-        <li>Floor finishes contain imperfections.</li>
-        <li>Current 24" range/oven narrower than available 30" space.
-      </ul>
-      <p class="list leaded h3">
         Financial and purchase information:
         <span class="toggle-child btn-list btn-info h5">
           <span class="do">Show&nbsp;details&nbsp;…</span>
@@ -1303,16 +1323,13 @@
         </span>
       </p>
       <ul class="list leaded later h5">
+        <li>Asking price $385,000.</li>
+        <li>Disclosures available before you make an offer to buy.</li>
+        <li>Pre-closing improvements negotiable.</li>
         <li>2017–2018 assessment rate $434.39 per month.</li>
         <li>
           Assessment covers heat, hot/cold water, waste disposal, and BTH services, spaces, and equipment.
         </li>
-        <li>Asking price $365,000.</li>
-        <li>
-          Some or all disclosures available before you make an offer
-          to buy.
-        </li>
-        <li>Pre-closing improvements negotiable.</li>
       </ul>
       <p class="down-2 list h4">Inquiries:</p>
       <ul class="h5">
@@ -1323,7 +1340,6 @@
         </a></li>
         <li>Text a request to 510-225-1700</li>
         <li>
-          Send a request via Twitter to @JonathanRPool
           <a
             href="https://twitter.com/messages/compose?recipient_id=53311970&ref_src=twsrc%5Etfw"
             class="twitter-dm-button"
@@ -1331,7 +1347,7 @@
             data-show-count="false"
             target="_blank"
           >
-            Send a request via Twitter to @JonathanRPool:
+            Send a request via Twitter to @JonathanRPool
           </a>
         </li>
         <li>Leave a voice message at 510-225-1717</li>
