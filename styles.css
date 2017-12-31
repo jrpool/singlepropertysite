@@ -186,6 +186,10 @@ ul {
   text-align: left;
 }
 
+.logo {
+  width: 20vw;
+}
+
 .mini-image {
   max-height: 2vw;
   width: auto;
