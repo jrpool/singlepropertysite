@@ -53,6 +53,7 @@
 }
 
 .btn-pulsing {
+  opacity: 0.8;
   z-index: 1050;
   animation-name: button-pulse;
   animation-duration: 1.5s;
@@ -256,11 +257,9 @@ section {
 
 @keyframes button-pulse {
   from {
-    opacity: 1;
     border-radius: 0.25rem;
   }
   to {
-    opacity: 0.5;
     border-radius: 1.5rem;
   }
 }
