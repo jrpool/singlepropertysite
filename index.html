@@ -33,6 +33,10 @@
           </td>
         </tr>
         <tr><td>☑</td><td>With an active owner community</td></tr>
+        <tr>
+          <td>☑</td>
+          <td>And net-neutral gigabit fiber</td>
+        </tr>
         <tr><td>☑</td><td>In a vibrant Bay-Area city</td></tr>
         <tr><td>☑</td><td>Affordable not just for the 1%</td></tr>
         <tr><td>☑</td><td>Available now—no waiting list</td></tr>
@@ -40,8 +44,8 @@
       <div class="h4 list leaded"><em>… then no, you haven’t lost your grip on reality.</em></div>
       <div class="h1 leaded">It exists!</div>
       <p class="down-5">
-        <span class="btn-lg btn-info btn-pulsing had-focus" dest="answer">
-          Unbelievable. Show me.
+        <span class="btn-lg h5 h5 btn-info btn-pulsing had-focus" dest="answer">
+          Unbelievable.&nbsp;Where?
         </span>
       </p>
     </section>
@@ -55,10 +59,10 @@
         ▲<br>Back
       </p>
       <p class="down-15 on-image">
-        <span class="h1">Voilà!<br><span class="bth-color">Berkeley Town House</span></span>
+        <span class="h1">At<br><span class="bth-color">Berkeley Town House</span></span>
       </p>
       <p class="down-10">
-        <span class="btn-lg btn-info btn-pulsing" dest="summary">
+        <span class="btn-lg h5 btn-info btn-pulsing" dest="summary">
           Tell me more!
         </span>
       </p>
@@ -95,35 +99,48 @@
       <p class="down-5 h2">What next?</p>
       <p class="h4">Take your pick:</p>
       <p class="down-2">
-        <span id="bth-more" class="btn-lg btn-info btn-pulsing" dest="details">
-          Details about BTH
+        <span class="h5">Details about: </span>
+        <span
+          id="bth-more"
+          class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
+          dest="details"
+        >
+          BTH
         </span>
-      </p>
-      <p>
         <span
           id="2c-more"
-          class="btn-lg btn-info btn-pulsing"
+          class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
           dest="apt2c"
         >
-          Details about apartment 2C
+          apartment&nbsp;2C
         </span>
       </p>
-      <p>
+      <p class="down-2">
+        <span class="h5">Picture tour of: </span>
         <span
-          id="tour-more"
-          class="next-pic btn-lg btn-info btn-pulsing"
-          dest="tour"
+          id="tour-bth-more"
+          class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
+          toursec="tour-bth"
+          tour="bth"
         >
-          Picture tour of BTH and 2C
+          BTH
+        </span>
+        <span
+          id="tour-apt2c-more"
+          class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
+          toursec="tour-apt2c"
+          tour="apt2c"
+        >
+          apartment&nbsp;2C
         </span>
       </p>
-      <p>
+      <p class="down-2">
         <span
           id="contact-more"
-          class="btn-lg btn-info btn-pulsing"
+          class="btn-lg h5 btn-info btn-pulsing"
           mailto="pool@stulta.com?subject=BTH&amp;body=Please%20contact%20me%20about%20Apartment%202C%20at%20BTH.%0d%0aMy%20name%20(if%20not%20above):%0d%0aMy%20email%20address%20(if%20different%20from%20above):%0d%0aMy%20telephone%20(optional):"
         >
-          Please contact me
+          Please&nbsp;contact&nbsp;me
         </span>
       </p>
     </section>
@@ -228,21 +245,38 @@
           <td>Walk to UC and other Berkeley treasures</td>
         </tr>
       </table>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="tour" class="frame later bg-image" stop="-1">
+    <section id="tour-bth" class="frame later bg-image" tour="bth" stop="-1">
       <p class="back btn-sm btn-info" dest="summary">▲<br>Stop<br>tour</p>
-      <p class="prior-pic btn-mid-left btn-sm btn-info">◀ Prior pic</p>
+      <p class="prior-pic btn-mid-left btn-sm btn-info" tour="bth">
+        ◀ Prior pic
+      </p>
       <p
-        class="next-pic btn-mid-right btn-lg btn-info btn-pulsing"
+        class="next-pic btn-mid-right btn-lg h5 btn-info btn-pulsing" tour="bth"
       >
         Next pic ▶
       </p>
       <p class="tour-title h3"></p>
-      <p id="tour-caption"></p>
+      <p class="tour-caption"></p>
+    </section>
+
+    <section id="tour-apt2c" class="frame later bg-image" tour="apt2c"
+      stop="-1">
+      <p class="back btn-sm btn-info" dest="summary">▲<br>Stop<br>tour</p>
+      <p class="prior-pic btn-mid-left btn-sm btn-info" tour="apt2c">
+        ◀ Prior pic
+      </p>
+      <p
+        class="next-pic btn-mid-right btn-lg h5 btn-info btn-pulsing" tour="apt2c"
+      >
+        Next pic ▶
+      </p>
+      <p class="tour-title h3"></p>
+      <p class="tour-caption"></p>
     </section>
 
     <section id="images" class="frame later bg-image">
@@ -342,12 +376,12 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="life-list">Next ▶</span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="life-list" class="frame later text-on-image"
+    <section id="life-list" class="frame later text-on-image" tour="bth"
       tour-start-intro="<em>START OF TOUR:</em>"
       tour-intro="BTH residents organize activities like …">
       <p
@@ -459,7 +493,7 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="coop-list">Next ▶</span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
@@ -519,12 +553,12 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="gov-list">Next ▶</span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="gov-list" class="frame later"
+    <section id="gov-list" class="frame later" tour="bth"
       tour-intro="BTH members help run the co‑op. They …">
       <p
         class="back btn-sm btn-info"
@@ -638,12 +672,12 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="common-list">Next ▶</span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="common-list" class="frame later"
+    <section id="common-list" class="frame later" tour="bth"
       tour-intro="Amenities available to members:">
       <p
         class="back btn-sm btn-info"
@@ -805,7 +839,7 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="apt-list">Next ▶</span>
       </p>
-      <p><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
@@ -845,12 +879,12 @@
       <p class="down-5 list">
         <span class="btn-sm btn-info h5" dest="walk-list">Next ▶</span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="walk-list" class="frame later"
+    <section id="walk-list" class="frame later" tour="bth"
       tour-intro="Walkable destinations:">
       <p
         class="back btn-sm btn-info"
@@ -873,7 +907,7 @@
       </p>
       <ul class="list leaded h4 later">
         <li>
-          UC Berkeley
+          <a href="http://events.berkeley.edu/" target="_blank">UC Berkeley</a>
           <span id="btn-walk-ucb" pic="ucb.jpg" class="btn-list btn-info">
             pic
           </span>
@@ -898,6 +932,16 @@
           <span
             id="btn-walk-academic"
             pic="academic.jpg"
+            class="btn-list btn-info"
+          >
+            pic
+          </span>
+        </li>
+        <li>
+          Law Library
+          <span
+            id="btn-walk-lawlib"
+            pic="lawlib.jpg"
             class="btn-list btn-info"
           >
             pic
@@ -1106,16 +1150,18 @@
       </ul>
       <p class="down-5">
         Map of BTH neighborhood
-        <span class="btn-lg btn-info btn-pulsing" pic="map.png">
+        <span class="btn-lg h5 btn-info btn-pulsing" pic="map.png">
           Map
         </span>
       </p>
-      <p class="down-5"><span class="btn-lg btn-info btn-pulsing" dest="apt2c">
+      <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
       </span></p>
     </section>
 
-    <section id="apt2c" class="frame later" tour-intro="About Apartment 2C:">
+    <section id="apt2c" class="frame later" tour="apt2c"
+      tour-intro="About Apartment 2C:"
+      tour-start-intro="<em>START OF TOUR:</em>">
       <p
         class="back btn-sm btn-info"
         title="Back to basic info"
@@ -1302,6 +1348,19 @@
           </span>
         </li>
         <li>Wired for dual-line DSL (22 mbps) and cable</li>
+        <li>
+          Gigabit fiber preordered for September 2018
+          <span id="btn-apt-fiber" pic="fibersep.png" class="btn-list btn-info">
+            pic
+          </span>
+          <span
+            id="btn-apt-fiber"
+            pic="fibersoon.png"
+            class="btn-list btn-info"
+          >
+            pic
+          </span>
+        </li>
         <li>
           Built-in hand-made queen bed with 27 ft³ of drawer storage
           <span id="btn-apt-bed" pic="bed.jpg" class="btn-list btn-info">

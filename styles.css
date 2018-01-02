@@ -22,15 +22,20 @@
   color: darkmagenta;
 }
 
-.btn-lg {
-  border-radius: 0.5rem;
-  cursor: pointer;
+.btn-adjacent {
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .btn-info:focus {
   border-width: 3px;
   border-style: solid;
   border-color: crimson;
+}
+
+.btn-lg {
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-list,
@@ -231,7 +236,7 @@ section {
   padding-right: 0.5rem;
 }
 
-.tour-caption {
+.tour-caption-on {
   position: fixed;
   bottom: 2px;
   left: 50vw;
