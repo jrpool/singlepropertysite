@@ -23,8 +23,8 @@
 }
 
 .btn-adjacent {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .btn-info:focus {
@@ -120,44 +120,13 @@
   text-align: center;
 }
 
+p.h1, p.h2, p.h3, p.h4, p.h5, h1, h2, h3, h4, h5 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .h1-minimum {
   font-size: 1.75rem;
-}
-
-.h1-proportional {
-  font-size: 7.5vw;
-}
-
-.h2-minimum {
-  font-size: 1.25rem;
-}
-
-.h2-proportional {
-  font-size: 5.5vw;
-}
-
-.h3-minimum {
-  font-size: 1rem;
-}
-
-.h3-proportional {
-  font-size: 3.5vw;
-}
-
-.h4-minimum {
-  font-size: 0.8rem;
-}
-
-.h4-proportional {
-  font-size: 2.5vw;
-}
-
-.h5-minimum {
-  font-size: 0.7rem;
-}
-
-.h5-proportional {
-  font-size: 2vw;
 }
 
 html, body {
@@ -193,7 +162,7 @@ ul {
 }
 
 .logo {
-  width: 20vw;
+  width: 10vmin;
 }
 
 .mini-image {
@@ -258,6 +227,10 @@ section {
 
 .undo {
   display: none;
+}
+
+.w-15 {
+  width: 15%;
 }
 
 @keyframes button-pulse {

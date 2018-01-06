@@ -2,22 +2,17 @@
 
 // Define a handler to make fonts’ sizes responsive to window width.
 var fontResize = function() {
-  [['.h1', 'h1'], ['.h2', 'h2'], ['.h3', 'h3'], ['.h4', 'h4'], ['.h5', 'h5']]
-  .forEach(function(spec) {
-    var targetElements = Array.from(document.querySelectorAll(spec[0]));
-    if (window.innerWidth > 700) {
-      targetElements.forEach(function(element) {
-        element.classList.remove(spec[1] + '-minimum');
-        element.classList.add(spec[1] + '-proportional');
-      });
-    }
-    else {
-      targetElements.forEach(function(element) {
-        element.classList.remove(spec[1] + '-proportional');
-        element.classList.add(spec[1] + '-minimum');
-      });
-    }
-  });
+  var minWinDim = Math.min(window.innerHeight, window.innerWidth);
+  var root = document.querySelector('html');
+  if (minWinDim > 1100) {
+    root.style.fontSize = '27px';
+  }
+  else if (minWinDim < 350) {
+    root.style.fontSize = '9px';
+  }
+  else {
+    root.style.fontSize = '2.5vmin';
+  }
 };
 
 // Define a handler to make the credit’s size responsive to window width.

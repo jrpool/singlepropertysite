@@ -19,33 +19,23 @@
   <body transition="off">
 
     <section id="question" class="frame initial">
-      <div class="down-5 h1">If you hope to buy:</div>
-      <table class="down-2 leaded table-btn h3">
-        <tr>
-          <td>☑</td>
-          <td>An apartment in a senior building</td>
-          <td rowspan="5">
-            <img
-              class="logo"
-              src="resources/images/seniorhousing.png"
-              alt="senior housing logo"
-            >
-          </td>
-        </tr>
-        <tr><td>☑</td><td>With an active owner community</td></tr>
-        <tr>
-          <td>☑</td>
-          <td>And net-neutral gigabit fiber</td>
-        </tr>
-        <tr><td>☑</td><td>In a vibrant Bay-Area city</td></tr>
-        <tr><td>☑</td><td>Affordable not just for the 1%</td></tr>
-        <tr><td>☑</td><td>Available now—no waiting list</td></tr>
+      <img
+        class="down-2 logo"
+        src="resources/images/seniorhousing.png"
+        alt="senior housing logo"
+      >
+      <p class="down-2 h1">Looking to buy a senior apartment?</p>
+      <p class="h3">Don’t overlook this one:</p>
+      <table class="leaded table-btn h4">
+        <tr><td>☑</td><td>In central Berkeley, near UC</td></tr>
+        <tr><td>☑</td><td>Active owner community</td></tr>
+        <tr><td>☑</td><td>1BR, recently remodeled</td></tr>
+        <tr><td>☑</td><td>Superfast Internet access</td></tr>
       </table>
-      <div class="h4 list leaded"><em>… then no, you haven’t lost your grip on reality.</em></div>
-      <div class="h1 leaded">It exists!</div>
+      </div>
       <p class="down-5">
         <span class="btn-lg h5 h5 btn-info btn-pulsing had-focus" dest="answer">
-          Unbelievable.&nbsp;Where?
+          Where is it?
         </span>
       </p>
     </section>
@@ -81,34 +71,36 @@
           More about Berkeley Town House …
         </span>
       </p>
-      <p class="down-5 h2">What is it?</p>
+      <p class="down-2 h2">What is it?</p>
+      <ul class="list h5">
+        <li>The U.S.’s first senior housing cooperative.</li>
+        <li>
+          Co-op? Yes, like a condo association, only
+          <strong><em>better</em></strong>: Co-op members co-own the building,
+          work together to run it, and form a friendly, supportive community.
+        </li>
+        <li>
+          Many Berkeley treasures (including UC) are an easy walk from BTH.
+        </li>
+      </ul>
+      <p class="down-2 h2">What’s available at BTH?</p>
       <p class="list h5">
-        Berkeley Town House (BTH) is the oldest senior housing
-        cooperative in the U.S.! A co-op is like a condo association, only
-        <em>better</em>. Why? Because co-op members co-own the building,
-        work together to run it, and form a friendly, supportive community.
+        <img
+          class="float-right ml-2 w-15"
+          src="resources/images/pool.jpg"
+          alt="current owner"
+        >
+        A few apartments are now vacant. One is mine: apartment 2C. My wife and I upgraded it in 2009, but now our work is calling us away from Berkeley. I’ve asked <a href="http://www.eastbaysmartsenior.com/" target="_blank">Joann Sullivan, a senior housing specialist</a>, to find a buyer who will appreciate the benefits of living at BTH.
       </p>
-      <p class="down-2 list h5">
-        UC Berkeley and many other treasures are an easy walk from BTH.
-      <p class="down-5 h2">What’s available?</p>
-      <p class="list h5">
-        A few apartments are now available. This website advertises
-        apartment 2C (1-bedroom). It has upgraded kitchen, bathroom,
-        wiring, and lighting.
-      </p>
-      <p class="down-5 h2">What next?</p>
-      <p class="h4">Take your pick:</p>
-      <p class="down-2">
+      <p class="down-5">
         <span class="h4">Details about: </span>
         <span
-          id="bth-more"
           class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
           dest="details"
         >
           BTH
         </span>
         <span
-          id="2c-more"
           class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
           dest="apt2c"
         >
@@ -118,7 +110,6 @@
       <p class="down-2">
         <span class="h4">Picture tour of: </span>
         <span
-          id="tour-bth-more"
           class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
           toursec="tour-bth"
           tour="bth"
@@ -126,7 +117,6 @@
           BTH
         </span>
         <span
-          id="tour-apt2c-more"
           class="btn-adjacent btn-lg h5 btn-info btn-pulsing"
           toursec="tour-apt2c"
           tour="apt2c"
@@ -136,7 +126,6 @@
       </p>
       <p class="down-2">
         <span
-          id="contact-more"
           class="btn-lg h5 btn-info btn-pulsing"
           mailto="pool@stulta.com?subject=BTH&amp;body=Please%20contact%20me%20about%20Apartment%202C%20at%20BTH.%0d%0aMy%20name%20(if%20not%20above):%0d%0aMy%20email%20address%20(if%20different%20from%20above):%0d%0aMy%20telephone%20(optional):"
         >
@@ -163,7 +152,6 @@
         <tr>
           <td>
             <span
-              id="members-more"
               class="btn-list btn-info h5"
               dest="members-list"
             >
@@ -175,7 +163,6 @@
         <tr>
           <td>
             <span
-              id="life-more"
               class="btn-list btn-info h5"
               dest="life-list"
             >
@@ -187,7 +174,6 @@
         <tr>
           <td>
             <span
-              id="coop-more"
               class="btn-list btn-info h5"
               dest="coop-list"
             >
@@ -199,7 +185,6 @@
         <tr>
           <td>
             <span
-              id="gov-more"
               class="btn-list btn-info h5"
               dest="gov-list"
             >
@@ -211,7 +196,6 @@
         <tr>
           <td>
             <span
-              id="common-more"
               class="btn-list btn-info h5"
               dest="common-list"
             >
@@ -223,7 +207,6 @@
         <tr>
           <td>
             <span
-              id="apt-more"
               class="btn-list btn-info h5"
               dest="apt-list"
             >
@@ -235,7 +218,6 @@
         <tr>
           <td>
             <span
-              id="walk-more"
               class="btn-list btn-info h5"
               dest="walk-list"
             >
@@ -403,30 +385,16 @@
       <ul class="list leaded h5">
         <li>
           Art workshops and exhibits
-          <span
-            id="btn-life-art"
-            pic="art.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="art.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Book discussions and readings
-          <span id="btn-life-book" pic="book.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="book.png" class="btn-list btn-info">pic</span>
         </li>
         <li>Bridge and poker games</li>
         <li>
           Chamber music recitals
-          <span
-            id="btn-life-chamber"
-            pic="chamber.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="chamber.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Charity drives</li>
         <li>Conversation groups</li>
@@ -435,80 +403,46 @@
         <li>Exercise workouts</li>
         <li>
           Candidate debates
-          <span id="btn-life-forum" pic="forum.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="forum.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Holiday parties
-          <span id="btn-life-party" pic="party.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="party.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Hosting regional meetings
-          <span
-            id="btn-life-ebchcpanel"
-            pic="ebchcpanel.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
-          <span
-            id="btn-life-ebchcfolks"
-            pic="ebchcfolks.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="ebchcpanel.jpg" class="btn-list btn-info">pic</span>
+          <span pic="ebchcfolks.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Jigsaw puzzles</li>
         <li>
           Member-to-member talks
-          <span id="btn-life-talk" pic="talk.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="talk.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Movie showings
-          <span id="btn-life-movie" pic="movie.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="movie.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Multicultural events
-          <span id="btn-life-multi" pic="multi.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="multi.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Mutual support circles
-          <span id="btn-life-circle" pic="circle.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="circle.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Potlucks
-          <span
-            id="btn-life-potluck"
-            pic="potluck.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="potluck.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Rock concerts
-          <span id="btn-life-rock" pic="rock.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="rock.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Sing-alongs</li>
         <li>
           Talks by visiting experts
-          <span id="btn-life-expert" pic="expert.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="expert.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-5 list">
@@ -599,16 +533,12 @@
         <li>Advise directors on appointments of officers, committees, contractors, employees, approval of new BTH members, and budgets.</li>
         <li>
           Exchange information and ideas at board meetings.
-          <span id="btn-gov-board" pic="board.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="board.png" class="btn-list btn-info">pic</span>
         </li>
         <li>Vote on any changes in fundamental rules.</li>
         <li>
            Advise the Board on proposed changes in operating rules.
-          <span id="btn-gov-rules" pic="rules.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="rules.png" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 h4">You can offer to serve as:</p>
@@ -621,44 +551,23 @@
       <ul class="list leaded h5">
         <li>
           Discuss issues facing the co‑op
-          <span id="btn-gov-dem" pic="dem.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="dem.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Examine co‑op finances
-          <span
-            id="btn-gov-finance"
-            pic="finance.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="finance.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Make landscaping improvements
-          <span
-            id="btn-gov-landscape"
-            pic="landscape.png" class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="landscape.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Design remodeling projects
-          <span
-            id="btn-gov-remodel"
-            pic="remodel.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="remodel.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Plan equipment modernization
-          <span id="btn-gov-avplan" pic="avplan.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="avplan.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Improve water and energy conservation
@@ -668,45 +577,23 @@
           >
             (recognition)
           </a>
-          <span id="btn-gov-water" pic="water.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="water.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Prepare for emergencies
-          <span
-            id="btn-gov-emergwater"
-            pic="emergwater.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="emergwater.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Maintain the garden
-          <span
-            id="btn-gov-gardening"
-            pic="gardening.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="gardening.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Decorate common spaces
-          <span id="btn-gov-decor" pic="decor.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="decor.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Collect and deliver recyclables
-          <span
-            id="btn-gov-recycle"
-            pic="recycle.jpg"
-            class="btn-list btn-info"
-          >
-           pic
-         </span>
+          <span pic="recycle.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-5 list">
@@ -754,84 +641,46 @@
       <ul class="list leaded h4 later">
         <li>
           Secure covered entrance
-          <span id="btn-common-entry" pic="entry.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="entry.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Library
-          <span
-            id="btn-common-library"
-            pic="library.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="library.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Lounge
-          <span
-            id="btn-common-lounge"
-            pic="lounge.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="lounge.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           “Multipurpose” (media) room
-          <span id="btn-common-mpr" pic="mpr.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="mpr.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Dining room
-          <span id="btn-common-dine" pic="dine.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="dine.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Kitchen
-          <span id="btn-common-kit" pic="kit.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="kit.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Secure mail room
-          <span id="btn-common-mail" pic="mail.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="mail.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Laundry room available at all times</li>
         <li>Storage rooms</li>
         <li>
           Patio with planter garden
-          <span id="btn-common-garden" pic="garden.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="garden.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Roof “Skyroom” (currently out of service)
-          <span id="btn-common-roof" pic="roof.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="roof.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Common-space walls hung with members’ art and photos
-          <span
-            id="btn-common-wallart"
-            pic="wallart.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
-          <span
-            id="btn-common-wallphotos"
-            pic="wallphotos.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="wallart.jpg" class="btn-list btn-info">pic</span>
+          <span pic="wallphotos.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list leaded h3">
@@ -844,99 +693,55 @@
       <ul class="list leaded h4 later">
         <li>Wi-fi throughout first-floor common space</li>
         <li>Oven, microwave, and refrigerator/freezer in kitchen
-          <span id="btn-common-fridge" pic="fridge.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="fridge.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Energy-efficient washers and dryers ($1.25/load)
-          <span
-            id="btn-common-laundry"
-            pic="laundry.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="laundry.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Audiovisual system with 60-inch plasma display
-          <span id="btn-common-av" pic="av.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="av.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Grand piano
-          <span id="btn-common-piano" pic="piano.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="piano.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Table tennis
-          <span
-            id="btn-common-ttennis"
-            pic="ttennis.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="ttennis.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Bocce ball</li>
         <li>
           “Give-away bench”
-          <span id="btn-common-give" pic="give.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="give.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Eight bulletin boards
-          <span id="btn-common-bb" pic="bb.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bb.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Personal message compartments
-          <span id="btn-common-msg" pic="msg.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="msg.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Passenger and passenger/freight elevators
-          <span
-            id="btn-common-elevboth"
-            pic="elevboth.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
-          <span
-            id="btn-common-elevin"
-            pic="elevin.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="elevboth.jpg" class="btn-list btn-info">pic</span>
+          <span pic="elevin.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Central fire alarm in common areas and units
-          <span id="btn-common-fire" pic="fire.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="fire.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Borrowable shopping carts
-          <span
-            id="btn-common-carts"
-            pic="carts.jpg"
-            class="btn-list btn-info"
-          >
+          <span pic="carts.jpg" class="btn-list btn-info">
             pic
           </span>
         </li>
         <li>
           Indoor bicycle racks
-          <span id="btn-common-bike" pic="bike.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bike.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-5 list">
@@ -1014,15 +819,11 @@
           <a href="http://events.berkeley.edu/" target="_blank">
             (public events)
           </a>
-          <span id="btn-walk-ucb" pic="ucb.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="ucb.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Lawrence Berkeley Lab
-          <span id="btn-walk-lbnl" pic="lbnl.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="lbnl.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1035,34 +836,18 @@
       <ul class="list leaded h4 later">
         <li>
           Academic Libraries
-          <span
-            id="btn-walk-academic"
-            pic="academic.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="academic.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Law Library
-          <span
-            id="btn-walk-lawlib"
-            pic="lawlib.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="lawlib.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Public Libraries
-          <span id="btn-walk-bpl" pic="bpl.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bpl.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Book stores
-          <span id="btn-walk-moes" pic="moes.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="moes.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1075,37 +860,23 @@
       <ul class="list leaded h4 later">
         <li>
           Berkeley Art Museum
-          <span id="btn-walk-bam" pic="bam.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bam.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Pacific Film Archive
-          <span id="btn-walk-pfa" pic="pfa.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="pfa.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Cinemas
-          <span id="btn-walk-cinema" pic="cinema.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="cinema.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Stage theaters
-          <span id="btn-walk-stage" pic="stage.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="stage.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Music venues
-          <span
-            id="btn-walk-freight"
-            pic="freight.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="freight.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1118,33 +889,23 @@
       <ul class="list leaded h4 later">
         <li>
           World-class restaurants
-          <span id="btn-walk-chez" pic="chez.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="chez.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           University cafeterias
-          <span id="btn-walk-ucaf" pic="ucaf.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="ucaf.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Cheap student eateries
-          <span id="btn-walk-cheap" pic="cheap.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="cheap.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Cafés
-          <span id="btn-walk-cafe" pic="cafe.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="cafe.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Berkeley Bowl Marketplace
-          <span id="btn-walk-bowl" pic="bowl.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bowl.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1157,9 +918,7 @@
       <ul class="list leaded h4 later">
         <li>
           Sutter East Bay Medical Foundation
-          <span id="btn-walk-sebmf" pic="sebmf.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="sebmf.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Berkeley Eye Center
@@ -1169,19 +928,11 @@
         </li>
         <li>
           UC Berkeley Recreational Sports
-          <span
-            id="btn-walk-recsports"
-            pic="recsports.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="recsports.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Tool Lending Library
-          <span id="btn-walk-tool" pic="tool.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="tool.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1194,37 +945,23 @@
       <ul class="list leaded h4 later">
         <li>
           2 BART Stations
-          <span id="btn-walk-bart" pic="bart.png" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bart.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Buses to all of East Bay, San Francisco, and Bay Area
-          <span id="btn-walk-bus" pic="bus.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bus.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Car sharing (Zipcar and Getaround)
-          <span id="btn-walk-zipcar" pic="zipcar.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="zipcar.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Bicycle sharing (Ford GoBike)
-          <span id="btn-walk-gobike" pic="gobike.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="gobike.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Resident-only parking
-          <span
-            id="btn-walk-parking"
-            pic="parking.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="parking.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-2 list h3">
@@ -1237,28 +974,20 @@
       <ul class="list leaded h4 later">
         <li>
           Botanical Gardens
-          <span id="btn-walk-bot" pic="bot.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bot.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           People's Park
-          <span id="btn-walk-park" pic="park.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="park.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Tilden Regional Park
-          <span id="btn-walk-tilden" pic="tilden.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="tilden.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="down-5">
         Map of BTH neighborhood
-        <span class="btn-lg h5 btn-info btn-pulsing" pic="map.png">
-          Map
-        </span>
+        <span class="btn-lg h5 btn-info btn-pulsing" pic="map.png">Map</span>
       </p>
       <p class="down-5"><span class="btn-lg h5 btn-info btn-pulsing" dest="apt2c">
         Tell me about apartment 2C
@@ -1289,24 +1018,12 @@
       <ul class="list leaded later h5">
         <li>
           2nd floor, facing south onto Parker Street
-          <span
-            id="btn-apt-site"
-            pic="site.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="site.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           1 bedroom, living/dining room, kitchen area, bathroom, foyer,
           sunroom
-          <span
-            id="btn-apt-layout"
-            pic="layout.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="layout.png" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="list leaded h3">
@@ -1319,31 +1036,19 @@
       <ul class="list leaded later h5">
         <li>
           2009 remodel permitted, inspected, approved
-          <span
-            id="btn-apt-remodel09"
-            pic="remodel09.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="remodel09.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           50-amp electrical rewiring and new panel
-          <span id="btn-apt-elec" pic="elec.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="elec.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Modernized, energy-efficient lighting
-          <span id="btn-apt-light" pic="light.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="light.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Semi-industrial floor finishes (epoxy, commercial linoleum)
-          <span id="btn-apt-floor" pic="floor.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="floor.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="list leaded h3">
@@ -1356,44 +1061,28 @@
       <ul class="list leaded later h5">
         <li>
           Kitchen completely remodeled
-          <span
-            id="btn-apt-kitchen"
-            pic="kitchen.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="kitchen.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Full-size dishwasher
-          <span id="btn-apt-dw" pic="dw.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="dw.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           New built-in 2-level microwave oven
-          <span id="btn-apt-micro" pic="micro.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="micro.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Space for 30" wide range/oven</li>
         <li>
           Extra-deep unitary kitchen sink
-          <span id="btn-apt-sink" pic="sink.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="sink.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Tall kitchen cabinets (no particle board)
-          <span id="btn-apt-kitcab" pic="kitcab.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="kitcab.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Floor-to-ceiling pantry with drawers
-          <span id="btn-apt-pantry" pic="pantry.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="pantry.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="list leaded h3">
@@ -1406,31 +1095,19 @@
       <ul class="list leaded later h5">
         <li>
           New bathroom cabinetry (no particle board)
-          <span
-            id="btn-apt-bathcab"
-            pic="bathcab.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="bathcab.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Tub-size walk-in shower
-          <span id="btn-apt-shower" pic="shower.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="shower.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Low-flow toilet (exempt from state-mandated 2018 replacement)
-          <span id="btn-apt-toilet" pic="toilet.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="toilet.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Two recessed medicine cabinets
-          <span id="btn-apt-medcab" pic="medcab.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="medcab.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="list leaded h3">
@@ -1449,42 +1126,20 @@
         </li>
         <li>
           Vertical blinds on all windows
-          <span id="btn-apt-blinds" pic="blinds.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="blinds.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>Wired for dual-line DSL (22 mbps) and cable</li>
         <li>
           Gigabit fiber preordered for September 2018
-          <span
-            id="btn-apt-fiber-order"
-            pic="fibersep.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
-          <span
-            id="btn-apt-fiber-confirm"
-            pic="fibersoon.png"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="fibersep.png" class="btn-list btn-info">pic</span>
+          <span pic="fibersoon.png" class="btn-list btn-info">pic</span>
         </li>
         <li>
           Built-in hand-made queen bed with 27 ft³ of drawer storage
-          <span id="btn-apt-bed" pic="bed.jpg" class="btn-list btn-info">
-            pic
-          </span>
+          <span pic="bed.jpg" class="btn-list btn-info">pic</span>
         </li>
         <li>3 storage shelves in basement
-          <span
-            id="btn-apt-storage"
-            pic="storage.jpg"
-            class="btn-list btn-info"
-          >
-            pic
-          </span>
+          <span pic="storage.jpg" class="btn-list btn-info">pic</span>
         </li>
       </ul>
       <p class="list leaded h3">
@@ -1506,12 +1161,12 @@
       <p class="down-2 list h4">Inquiries:</p>
       <ul class="h5">
         <li><a
-          href="mailto:pool@stulta.com?subject=BTH&amp;body=Please%20contact%20me%20about%20Apartment%202C%20at%20BTH.%0d%0aMy%20name%20(if%20not%20above):%0d%0aMy%20email%20address%20(if%20different%20from%20above):%0d%0aMy%20telephone%20(optional):"
+          href="mailto:joann@thornwallproperties.com?subject=BTH&amp;body=Please%20contact%20me%20about%20Apartment%202C%20at%20BTH.%0d%0aMy%20name%20(if%20not%20above):%0d%0aMy%20email%20address%20(if%20different%20from%20above):%0d%0aMy%20telephone%20(optional):"
         >
-          Email a request to pool@stulta.com
+          Email a request to joann@thornwallproperties.com
         </a></li>
-        <li>Text a request to 510-225-1700</li>
-        <li>
+        <li>Text a request to 510-393-7889</li>
+        <!-- <li>
           <a
             href="https://twitter.com/messages/compose?recipient_id=53311970&ref_src=twsrc%5Etfw"
             class="twitter-dm-button"
@@ -1521,8 +1176,8 @@
           >
             Send a request via Twitter to @JonathanRPool
           </a>
-        </li>
-        <li>Leave a voice message at 510-225-1717</li>
+        </li> -->
+        <li>Telephone 510-393-7889</li>
       </ul>
     </section>
 
