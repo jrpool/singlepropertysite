@@ -18,6 +18,10 @@
   background-size: contain;
 }
 
+body {
+  background-color: aliceblue;
+}
+
 .bth-color {
   color: darkmagenta;
 }
@@ -183,6 +187,10 @@ ul {
   right: 20px;
 }
 
+.noscroll {
+  overflow-y: hidden;
+}
+
 .on-image {
   display: flex;
   justify-content: center;
@@ -237,9 +245,9 @@ section {
   display: none;
 }
 
-.w10m4 {
-  width: 10%;
-  max-width: 4rem;
+.w15m4 {
+  width: 15vw;
+  max-width: 6rem;
 }
 
 @keyframes button-pulse {
