@@ -229,8 +229,8 @@ section {
   display: none;
 }
 
-.w-15 {
-  width: 15%;
+.w-10 {
+  width: 10%;
 }
 
 @keyframes button-pulse {
