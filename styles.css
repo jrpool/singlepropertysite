@@ -184,6 +184,11 @@ ul {
 }
 
 .on-image {
+  display: flex;
+  justify-content: center;
+}
+
+.on-image > span {
   border-radius: 6px;
   padding: 0.1em 0.3em;
   background-color: #ffffffcc;
