@@ -150,13 +150,13 @@ var showPicOf = function(tourData, tourSection, newStop) {
       = 'url(resources/images/' + tourData[newStop][0] + ')';
     titleParagraph.innerHTML = '';
     captionParagraph.classList.add('tour-caption-on');
-    captionParagraph.innerHTML = tourData[newStop][1];
+    captionParagraph.firstElementChild.innerHTML = tourData[newStop][1];
   }
   else {
     tourSection.style['background-image'] = '';
     titleParagraph.innerHTML = tourData[newStop][1];
     captionParagraph.classList.remove('tour-caption-on');
-    captionParagraph.innerHTML = '';
+    captionParagraph.firstElementChild.innerHTML = '';
   }
 };
 // Handler for next.
