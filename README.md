@@ -7,12 +7,17 @@ Single-page website advertising a real-estate property for sale.
 - [José Chavez](https://github.com/jbchavez19)
 - [Jorge Lopez](https://github.com/je-lopez)
 - [Jonathan Pool](https://github.com/jrpool)
+- [Greg Wong](https://github.com/gwong5)
 
 ## Repository
 
-https://github.com/jrpool/sellpage
+https://github.com/jrpool/singlepropertysite
 
-## website
+## Predecessor
+
+https://github.com/PhaseFive/singlepropertysite
+
+## Deployed application
 
 https://jrpool.github.io/singlepropertysite/
 
