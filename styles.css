@@ -13,8 +13,13 @@
   background-color: transparent;
 }
 
-.bg-image-bldg {
-  background: url("resources/images/bldg.jpg") center top no-repeat;
+.bg-image-bldg-0 {
+  background: url("resources/images/bldg-0.jpg") center top no-repeat;
+  background-size: contain;
+}
+
+.bg-image-bldg-1 {
+  background: url("resources/images/bldg-1.jpg") center top no-repeat;
   background-size: contain;
 }
 
@@ -125,6 +130,11 @@ body {
   width: 100%;
   overflow-y: scroll;
   text-align: center;
+}
+
+.frame > p {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 h1,

@@ -98,13 +98,25 @@ var replaceSection = function(replacee, replacer) {
     replacer.scrollTop = 0;
   };
 }
+// Define background-image randomizer.
+var randomizeBackgroundImage = function(section, classBase) {
+  var imageIs1 = Math.random() > 0.5;
+  section.classList.toggle(classBase + '1', imageIs1);
+  section.classList.toggle(classBase + '0', !imageIs1);
+};
 // Define listeners for a button navigating between sections.
 var replaceOnClick = function(trigger, replacee, replacer) {
   trigger.onclick = function() {
+    if (replacer.id === 'answer') {
+      randomizeBackgroundImage(replacer, 'bg-image-bldg-');
+    }
     replaceSection(replacee, replacer);
   };
   trigger.onkeydown = function(event) {
     if (event.key === ' ' || event.key === 'Enter') {
+      if (replacer.id === 'answer') {
+        randomizeBackgroundImage(replacer, 'bg-image-bldg-');
+      }
       replaceSection(replacee, replacer);
     }
   };
