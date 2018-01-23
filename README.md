@@ -21,7 +21,7 @@ https://github.com/PhaseFive/singlepropertysite
 
 https://jrpool.github.io/singlepropertysite/
 
-## Predecessor deployed application
+## Predecessor deployed application (earlier version)
 
 https://propert-947ad.firebaseapp.com/
 
