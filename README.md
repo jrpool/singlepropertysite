@@ -13,13 +13,17 @@ Single-page website advertising a real-estate property for sale.
 
 https://github.com/jrpool/singlepropertysite
 
-## Predecessor
+## Predecessor repository
 
 https://github.com/PhaseFive/singlepropertysite
 
 ## Deployed application
 
 https://jrpool.github.io/singlepropertysite/
+
+## Predecessor deployed application
+
+https://propert-947ad.firebaseapp.com/
 
 ## Discussion
 
